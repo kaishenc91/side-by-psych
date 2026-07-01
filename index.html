@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Side by Psych Wellness Centre | Mental Health Support in Ampang</title>
+  <meta name="description" content="Side by Psych Wellness Centre provides professional psychological and counselling support in Ampang, Selangor, with in-person and online appointments.">
+  <meta name="theme-color" content="#7a6547">
+  <style>
+    :root {
+      --ink: #242321;
+      --muted: #6a665f;
+      --line: #ddd5c9;
+      --paper: #fbfaf6;
+      --soft: #f1eee7;
+      --brand: #9a6a3d;
+      --brand-dark: #68472d;
+      --sage: #667762;
+      --sage-soft: #e8eee6;
+      --charcoal: #323331;
+      --white: #ffffff;
+      --shadow: 0 22px 60px rgba(43, 38, 31, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(154, 106, 61, 0.08), transparent 28%),
+        linear-gradient(180deg, #fbfaf6 0%, #f4f1eb 58%, #fbfaf6 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(222, 216, 205, 0.78);
+      background: rgba(251, 250, 247, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(1120px, calc(100% - 32px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .brand-name {
+      display: grid;
+      gap: 1px;
+      min-width: 0;
+    }
+
+    .brand-name strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(18px, 2vw, 23px);
+      letter-spacing: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-name span {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-dark);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--brand-dark);
+      box-shadow: 0 10px 22px rgba(109, 77, 49, 0.2);
+    }
+
+    .button-primary:hover {
+      background: #5f4229;
+    }
+
+    .button-secondary {
+      color: var(--brand-dark);
+      background: var(--white);
+      border-color: var(--line);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .section {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+      gap: 46px;
+      align-items: center;
+      padding: 58px 0 42px;
+    }
+
+    .hero-logo-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 10px 14px 10px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 12px 28px rgba(45, 38, 29, 0.08);
+    }
+
+    .hero-logo-card img {
+      width: 52px;
+      height: 52px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .hero-logo-card span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin: 0 0 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 820px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(44px, 5.6vw, 74px);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .lead {
+      max-width: 660px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 20px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--sage-soft);
+      color: #435047;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-panel {
+      position: relative;
+      min-height: 610px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(23, 24, 22, 0.02), rgba(23, 24, 22, 0.64)),
+        url("assets/hero-room.jpg") center / cover no-repeat;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .panel-content {
+      position: absolute;
+      inset: auto 26px 26px;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .status-card {
+      min-height: 108px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      color: var(--white);
+      background: rgba(24, 24, 22, 0.62);
+      backdrop-filter: blur(14px);
+    }
+
+    .status-card span {
+      display: block;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 13px;
+    }
+
+    .status-card strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 17px;
+    }
+
+    .photo-section {
+      padding: 72px 0 8px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr 0.88fr;
+      grid-auto-rows: 235px;
+      gap: 14px;
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      box-shadow: 0 14px 34px rgba(43, 38, 31, 0.08);
+    }
+
+    .photo-card.featured {
+      grid-row: span 2;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 46%, rgba(24, 24, 22, 0.46));
+      pointer-events: none;
+    }
+
+    .photo-label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1;
+      color: var(--white);
+      font-weight: 800;
+      text-shadow: 0 1px 10px rgba(0, 0, 0, 0.26);
+    }
+
+    .founder {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.76fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: stretch;
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.78)),
+        url("assets/room-seating.jpg") center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .founder-card {
+      display: grid;
+      align-content: end;
+      min-height: 500px;
+      padding: 28px;
+      border-radius: 8px;
+      color: var(--white);
+      background:
+        linear-gradient(180deg, rgba(27, 29, 27, 0), rgba(27, 29, 27, 0.2) 44%, rgba(27, 29, 27, 0.86)),
+        url("assets/founder-kai-shen.jpg") center / cover no-repeat;
+      overflow: hidden;
+    }
+
+    .founder-badge {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 16px;
+      padding: 8px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      backdrop-filter: blur(10px);
+    }
+
+    .founder-card h2 {
+      color: var(--white);
+      font-size: clamp(28px, 3.4vw, 42px);
+    }
+
+    .founder-card p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 700;
+    }
+
+    .founder-copy {
+      padding: 6px 0;
+    }
+
+    .founder-copy .lead {
+      margin-top: 16px;
+      font-size: 18px;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 26px 0;
+    }
+
+    .credential {
+      min-height: 104px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.86);
+    }
+
+    .credential span {
+      display: block;
+      color: var(--sage);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .credential strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .founder-points {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .founder-points li {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .founder-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+    }
+
+    .intro-band {
+      margin-top: 28px;
+      padding: 28px 0;
+      border-block: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+    }
+
+    .stat {
+      min-height: 116px;
+      padding: 24px;
+      background: var(--white);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--brand-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .content-section {
+      padding: 74px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.58fr);
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .service {
+      min-height: 188px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 26px rgba(43, 38, 31, 0.05);
+    }
+
+    .service .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--sage);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .service p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .care {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+      padding: 46px;
+      border-radius: 8px;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(48, 58, 51, 0.96), rgba(48, 58, 51, 0.86)),
+        url("assets/tulip-table.jpg") right center / auto 100% no-repeat;
+    }
+
+    .care p {
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .care-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .care-list li {
+      padding: 16px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .contact-main,
+    .contact-side {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .contact-main {
+      padding: 36px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.86)),
+        url("assets/soft-detail.jpg") right center / cover no-repeat;
+    }
+
+    .contact-main p {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-side {
+      display: grid;
+      align-content: start;
+      gap: 1px;
+      overflow: hidden;
+      background: var(--line);
+    }
+
+    .contact-row {
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .contact-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .contact-row strong,
+    .contact-row a {
+      display: block;
+      margin-top: 7px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 28px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        overflow-x: auto;
+      }
+
+      .hero,
+      .section-heading,
+      .founder,
+      .care,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 42px;
+        gap: 34px;
+      }
+
+      .hero-panel {
+        min-height: 430px;
+      }
+
+      .stats,
+      .services,
+      .photo-grid,
+      .credentials {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid {
+        grid-auto-rows: 260px;
+      }
+
+      .photo-card.featured {
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .brand-name strong {
+        white-space: normal;
+      }
+
+      .brand-name span {
+        font-size: 11px;
+      }
+
+      .hero-panel {
+        min-height: 390px;
+        background-size: 88% auto;
+      }
+
+      .panel-content {
+        inset: auto 16px 16px;
+      }
+
+      .content-section {
+        padding: 52px 0;
+      }
+
+      .care,
+      .contact-main {
+        padding: 26px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Side by Psych Wellness Centre",
+      "description": "Mental health and wellness centre in Ampang, Selangor offering psychological and counselling support by appointment.",
+      "telephone": "+601111123703",
+      "email": "sidebypsych@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A-6-1, Merdeka Place Jalan MPL, Jalan Merdeka",
+        "addressLocality": "Ampang",
+        "addressRegion": "Selangor",
+        "postalCode": "68000",
+        "addressCountry": "MY"
+      },
+      "openingHours": "Mo-Su 09:00-22:00"
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Side by Psych Wellness Centre home">
+        <img src="assets/logo.jpg" alt="Side by Psych Wellness Centre logo">
+        <span class="brand-name">
+          <strong>Side by Psych</strong>
+          <span>Wellness Centre</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#founder">Founder</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+        <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section hero">
+      <div>
+        <div class="hero-logo-card">
+          <img src="assets/logo.jpg" alt="">
+          <span>Professional psychological support by appointment</span>
+        </div>
+        <p class="eyebrow">Mental health and wellness support in Ampang</p>
+        <h1>Healing begins side by side.</h1>
+        <p class="lead">Side by Psych Wellness Centre offers professional, approachable psychological and counselling support for individuals, children, adolescents, workplaces and communities.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://wa.me/601111123703">Book an appointment</a>
+          <a class="button button-secondary" href="mailto:sidebypsych@gmail.com">Email the centre</a>
+        </div>
+        <div class="hero-note" aria-label="Key details">
+          <span class="pill">In-person or online</span>
+          <span class="pill">By appointment</span>
+          <span class="pill">9:00 AM to 10:00 PM</span>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Centre information">
+        <div class="panel-content">
+          <div class="status-card">
+            <span>Primary location</span>
+            <strong>Ampang, Selangor</strong>
+          </div>
+          <div class="status-card">
+            <span>Care areas</span>
+            <strong>Psychotherapy, counselling, assessments and psychoeducation</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="intro-band">
+      <section class="section stats" aria-label="Centre highlights">
+        <div class="stat">
+          <strong>7 days</strong>
+          <span>Appointment availability from Monday to Sunday.</span>
+        </div>
+        <div class="stat">
+          <strong>1:1</strong>
+          <span>Individual support tailored to each client and their goals.</span>
+        </div>
+        <div class="stat">
+          <strong>Online</strong>
+          <span>Flexible support through in-person or remote sessions.</span>
+        </div>
+      </section>
+    </div>
+
+    <section class="section photo-section" aria-label="Inside Side by Psych Wellness Centre">
+      <div class="section-heading">
+        <h2>A calm, private space for meaningful conversations.</h2>
+        <p>Real photos from the centre help clients know what to expect before they arrive.</p>
+      </div>
+      <div class="photo-grid">
+        <figure class="photo-card featured">
+          <img src="assets/room-wide.jpg" alt="Comfortable counselling room with grey seating and a round table">
+          <figcaption class="photo-label">Welcoming therapy room</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="assets/tulip-table.jpg" alt="Tulips and calming decor in the counselling room">
+          <figcaption class="photo-label">Small details, softer arrivals</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="assets/room-seating.jpg" alt="Grey sofa seating arranged around a table">
+          <figcaption class="photo-label">Comfortable seating</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="assets/therapy-room.jpg" alt="Therapy room seating with warm wood and soft curtains">
+          <figcaption class="photo-label">Private by appointment</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="assets/soft-detail.jpg" alt="Tulips on a table with a soft counselling room background">
+          <figcaption class="photo-label">Grounded and human</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section content-section" id="founder">
+      <div class="founder">
+        <aside class="founder-card" aria-label="Founder profile">
+          <span class="founder-badge">MAHPC registered</span>
+          <h2>Chen Kai Shen</h2>
+          <p>Founder and Clinical Psychologist</p>
+        </aside>
+
+        <div class="founder-copy">
+          <p class="eyebrow">Meet the founder</p>
+          <h2>Clinical care shaped by therapy, teaching and community work.</h2>
+          <p class="lead">Kai Shen is a registered Clinical Psychologist who founded Side by Psych Wellness Centre to provide grounded, accessible and professional mental health support in Malaysia.</p>
+
+          <div class="credentials" aria-label="Professional credentials">
+            <div class="credential">
+              <span>Registration</span>
+              <strong>Registered Clinical Psychologist, MAHPC Reg No. MAHPC(CP)00565</strong>
+            </div>
+            <div class="credential">
+              <span>Membership</span>
+              <strong>Full Member, Malaysian Society of Clinical Psychology, CP1-0540</strong>
+            </div>
+            <div class="credential">
+              <span>Education</span>
+              <strong>Master of Clinical Psychology, University of Cyberjaya</strong>
+            </div>
+            <div class="credential">
+              <span>Languages</span>
+              <strong>English, Mandarin and Malay</strong>
+            </div>
+          </div>
+
+          <ul class="founder-points">
+            <li>Clinical experience in psychological consultation, diagnostic assessment and psychotherapy with a range of clients.</li>
+            <li>Therapy training and practice across Emotion-Focused Therapy, ACT, DBT, mindfulness-based therapy, CBT, solution-focused work and expressive approaches.</li>
+            <li>Academic and teaching experience as a psychology lecturer, with a background in research and student supervision.</li>
+            <li>Community experience supporting B40 families through psychoeducation, case management and resilience-building work.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section content-section" id="services">
+      <div class="section-heading">
+        <h2>Support for personal, family and workplace wellbeing.</h2>
+        <p>The centre provides focused psychological services with a calm, practical and respectful approach to care.</p>
+      </div>
+
+      <div class="services">
+        <article class="service">
+          <span class="number">01</span>
+          <h3>Individual psychotherapy</h3>
+          <p>Support for emotional wellbeing, coping, life transitions, stress, self-growth and personal challenges.</p>
+        </article>
+        <article class="service">
+          <span class="number">02</span>
+          <h3>Child and adolescent therapy</h3>
+          <p>Developmentally sensitive support for younger clients and families navigating emotional or behavioural concerns.</p>
+        </article>
+        <article class="service">
+          <span class="number">03</span>
+          <h3>Career counselling and assessments</h3>
+          <p>Guidance and assessment services for career direction, personal insight and informed decision-making.</p>
+        </article>
+        <article class="service">
+          <span class="number">04</span>
+          <h3>Workshops and psychoeducation</h3>
+          <p>Practical learning sessions for schools, organisations and communities seeking mental health awareness.</p>
+        </article>
+        <article class="service">
+          <span class="number">05</span>
+          <h3>Corporate wellness</h3>
+          <p>Supportive programmes that help teams build healthier communication, resilience and workplace wellbeing.</p>
+        </article>
+        <article class="service">
+          <span class="number">06</span>
+          <h3>Creative therapy and self-growth</h3>
+          <p>Reflective, expressive approaches for clients who benefit from creative ways of exploring change and healing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section content-section" id="approach">
+      <div class="care">
+        <div>
+          <p class="eyebrow">Our approach</p>
+          <h2>Professional care that feels grounded and human.</h2>
+          <p>Side by Psych is built around the idea that healing is not something people have to do alone. Sessions are designed to be collaborative, respectful and practical, with support shaped around the person in front of us.</p>
+        </div>
+        <ul class="care-list">
+          <li>Confidential, appointment-based support for a focused and private experience.</li>
+          <li>Accessible mental health services for individuals, families, schools and workplaces.</li>
+          <li>Clear communication through WhatsApp, phone or email before booking.</li>
+          <li>Flexible in-person and online options to suit different needs and schedules.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section content-section" id="contact">
+      <div class="contact-wrap">
+        <div class="contact-main">
+          <p class="eyebrow">Book a session</p>
+          <h2>Start with a simple message.</h2>
+          <p>Appointments are available daily from 9:00 AM to 10:00 PM. Reach out through WhatsApp or email to ask about availability, service fit or next steps.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp +60 11-1112 3703</a>
+            <a class="button button-secondary" href="mailto:sidebypsych@gmail.com">sidebypsych@gmail.com</a>
+          </div>
+        </div>
+
+        <aside class="contact-side" aria-label="Contact details">
+          <div class="contact-row">
+            <span>Location</span>
+            <strong>A-6-1, Merdeka Place Jalan MPL, Jalan Merdeka, 68000 Ampang, Selangor</strong>
+          </div>
+          <div class="contact-row">
+            <span>Phone and WhatsApp</span>
+            <a href="tel:+601111123703">+60 11-1112 3703</a>
+          </div>
+          <div class="contact-row">
+            <span>Email</span>
+            <a href="mailto:sidebypsych@gmail.com">sidebypsych@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span>Hours</span>
+            <strong>Monday to Sunday, 9:00 AM to 10:00 PM</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Side by Psych Wellness Centre</span>
+      <span>Registration No. 202403299646</span>
+    </div>
+  </footer>
+</body>
+</html>
