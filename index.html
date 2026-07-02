@@ -138,6 +138,14 @@
       transform: translateY(-1px);
     }
 
+    .button:focus-visible,
+    .quote-control:focus-visible,
+    .focus-button:focus-visible,
+    .faq-item summary:focus-visible {
+      outline: 3px solid rgba(154, 106, 61, 0.3);
+      outline-offset: 3px;
+    }
+
     .button-primary {
       color: var(--white);
       background: var(--brand-dark);
@@ -152,6 +160,12 @@
       color: var(--brand-dark);
       background: var(--white);
       border-color: var(--line);
+    }
+
+    .button-muted {
+      color: #435047;
+      background: var(--sage-soft);
+      border-color: rgba(102, 119, 98, 0.2);
     }
 
     main {
@@ -181,6 +195,7 @@
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.78);
       box-shadow: 0 12px 28px rgba(45, 38, 29, 0.08);
+      animation: floatIn 0.8s ease both;
     }
 
     .hero-logo-card img {
@@ -293,6 +308,35 @@
       font-size: 16px;
     }
 
+    .quote-copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .quote-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .quote-control {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(102, 119, 98, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.6);
+      color: var(--sage);
+      cursor: pointer;
+      font-weight: 800;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .quote-control:hover,
+    .quote-control[aria-pressed="true"] {
+      background: var(--sage);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
     .hero-panel {
       position: relative;
       min-height: 610px;
@@ -303,6 +347,7 @@
         url("assets/hero-room.jpg") center / cover no-repeat;
       box-shadow: var(--shadow);
       overflow: hidden;
+      animation: panelBreathe 8s ease-in-out infinite alternate;
     }
 
     .hero-panel::after {
@@ -537,6 +582,82 @@
       font-size: 17px;
     }
 
+    .bilingual-grid,
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .language-card,
+    .booking-card,
+    .notice-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 26px rgba(43, 38, 31, 0.05);
+    }
+
+    .language-card {
+      padding: 30px;
+    }
+
+    .language-card p,
+    .booking-card p,
+    .notice-card p {
+      color: var(--muted);
+    }
+
+    .language-card p:last-child,
+    .booking-card p:last-child,
+    .notice-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .booking-card {
+      display: grid;
+      gap: 1px;
+      overflow: hidden;
+      background: var(--line);
+    }
+
+    .booking-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .booking-step span {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--brand-dark);
+      font-weight: 800;
+    }
+
+    .booking-step h3 {
+      margin-top: 4px;
+    }
+
+    .booking-step p {
+      margin: 8px 0 0;
+    }
+
+    .notice-card {
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 238, 230, 0.76));
+    }
+
+    .notice-card + .notice-card {
+      margin-top: 14px;
+    }
+
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -595,6 +716,45 @@
       margin: 16px 0 0;
       color: var(--muted);
       font-size: 17px;
+    }
+
+    .focus-tool {
+      margin-top: 24px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(232, 238, 230, 0.5);
+    }
+
+    .focus-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .focus-button {
+      min-height: 38px;
+      padding: 0 12px;
+      border: 1px solid rgba(102, 119, 98, 0.34);
+      border-radius: 999px;
+      background: var(--white);
+      color: #435047;
+      cursor: pointer;
+      font-weight: 800;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .focus-button:hover,
+    .focus-button[aria-selected="true"] {
+      background: var(--sage);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .focus-panel {
+      margin: 0;
+      color: var(--muted);
     }
 
     .eft-points {
@@ -662,12 +822,86 @@
     }
 
     .faq-item {
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 88px;
       padding: 24px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: var(--brand-dark);
+      background: var(--soft);
+      font-size: 20px;
+      line-height: 1;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: "-";
+      transform: rotate(180deg);
+      background: var(--sage-soft);
+    }
+
+    .faq-item h3 {
+      font-size: 17px;
     }
 
     .faq-item p {
-      margin: 10px 0 0;
+      margin: 0;
+      padding: 0 24px 24px;
       color: var(--muted);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes panelBreathe {
+      from {
+        box-shadow: 0 22px 60px rgba(43, 38, 31, 0.14);
+      }
+
+      to {
+        box-shadow: 0 26px 72px rgba(43, 38, 31, 0.2);
+      }
     }
 
     .contact-wrap {
@@ -703,6 +937,64 @@
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 28px;
+    }
+
+    .enquiry-form {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ink);
+      font: inherit;
+      padding: 12px 13px;
+    }
+
+    .field textarea {
+      min-height: 112px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: 3px solid rgba(154, 106, 61, 0.18);
+      border-color: rgba(154, 106, 61, 0.5);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
     }
 
     .contact-side {
@@ -770,8 +1062,11 @@
       .founder,
       .quote-inner,
       .eft-detail,
+      .bilingual-grid,
+      .booking-grid,
       .care,
-      .contact-wrap {
+      .contact-wrap,
+      .form-row {
         grid-template-columns: 1fr;
       }
 
@@ -782,6 +1077,7 @@
 
       .hero-panel {
         min-height: 430px;
+        animation: none;
       }
 
       .services,
@@ -833,6 +1129,26 @@
 
       .button {
         width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
@@ -893,6 +1209,22 @@
             "@type": "Answer",
             "text": "Sessions are handled with professional confidentiality, within the usual ethical and legal limits such as risk of harm, safeguarding concerns or legal requirements."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much are the session fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Session fees are available upon enquiry and may vary depending on service type, session format, and assessment needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I contact the centre during a crisis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The centre is not an emergency service. If there is immediate danger, please contact local emergency services, go to the nearest hospital emergency department, or reach out to a crisis helpline."
+          }
         }
       ]
     }
@@ -913,6 +1245,7 @@
         <a href="#founder">Founder</a>
         <a href="#eft">EFT</a>
         <a href="#services">Services</a>
+        <a href="#mandarin">中文</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp</a>
@@ -957,10 +1290,38 @@
 
     <div class="quote-band">
       <div class="quote-inner">
-        <blockquote>Your emotions are not your enemy; they are signals asking to be understood.</blockquote>
-        <p>Therapy offers a safe, professional relationship where painful patterns can be explored with care, not judgment.</p>
+        <blockquote id="quoteText">Your emotions are not your enemy; they are signals asking to be understood.</blockquote>
+        <div class="quote-copy">
+          <p id="quoteSupport">Therapy offers a safe, professional relationship where painful patterns can be explored with care, not judgment.</p>
+          <div class="quote-controls" aria-label="Choose reflection quote">
+            <button class="quote-control" type="button" aria-label="Show first reflection" aria-pressed="true" data-quote-index="0">1</button>
+            <button class="quote-control" type="button" aria-label="Show second reflection" aria-pressed="false" data-quote-index="1">2</button>
+            <button class="quote-control" type="button" aria-label="Show third reflection" aria-pressed="false" data-quote-index="2">3</button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <section class="section content-section" id="mandarin">
+      <div class="section-heading">
+        <h2>Support available in English and Mandarin.</h2>
+        <p>Side by Psych Wellness Centre also welcomes Mandarin-speaking clients who prefer to express emotional experiences, relationships, and personal concerns in a more familiar language.</p>
+      </div>
+
+      <div class="bilingual-grid">
+        <article class="language-card reveal">
+          <p class="eyebrow">English</p>
+          <h3>Therapy that meets you in your own words.</h3>
+          <p>Sessions can be conducted in English, Mandarin, or Malay, depending on clinical fit and communication needs. The aim is to create a space where clients can speak honestly and feel understood.</p>
+        </article>
+        <article class="language-card reveal" lang="zh-Hans">
+          <p class="eyebrow">中文服务</p>
+          <h3>伴旅心理健康服务</h3>
+          <p>我们提供以预约为主的心理治疗与心理健康支持，协助来谈者理解情绪、关系困扰、自我批评、焦虑、低落及生活压力。</p>
+          <p>治疗过程重视安全感、尊重与专业陪伴，让情绪被理解，而不是被批评或压抑。</p>
+        </article>
+      </div>
+    </section>
 
     <section class="section photo-section" aria-label="Inside Side by Psych Wellness Centre">
       <div class="section-heading">
@@ -1050,6 +1411,14 @@
           <h3>What is EFT?</h3>
           <p>Emotion Focused Therapy is a psychotherapy approach that helps clients become more aware of what they feel, understand why certain emotional patterns repeat, and gradually transform painful emotional responses into more adaptive ways of relating to themselves and others.</p>
           <p>Sessions may involve slowing down, noticing the body and emotions, naming inner experiences, exploring self-criticism or unresolved hurt, and making space for deeper needs such as safety, connection, validation or self-acceptance.</p>
+          <div class="focus-tool" aria-label="Explore therapy focus areas">
+            <div class="focus-buttons" role="tablist" aria-label="Therapy focus areas">
+              <button class="focus-button" type="button" role="tab" aria-selected="true" data-focus="emotions">Emotions</button>
+              <button class="focus-button" type="button" role="tab" aria-selected="false" data-focus="relationships">Relationships</button>
+              <button class="focus-button" type="button" role="tab" aria-selected="false" data-focus="self">Self-criticism</button>
+            </div>
+            <p class="focus-panel" id="focusPanel">EFT supports clients in noticing emotions, naming what feels difficult, and understanding what those emotions may be trying to protect or express.</p>
+          </div>
         </article>
 
         <ul class="eft-points">
@@ -1109,6 +1478,52 @@
       </div>
     </section>
 
+    <section class="section content-section" id="booking">
+      <div class="section-heading">
+        <h2>A simple appointment pathway.</h2>
+        <p>Appointments are arranged in advance so the centre can understand the support you are looking for and suggest a suitable next step.</p>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-card">
+          <article class="booking-step">
+            <span>1</span>
+            <div>
+              <h3>Send a brief enquiry</h3>
+              <p>Message through WhatsApp, email, or the enquiry form below with your name, preferred session mode, and a short note about what support you are seeking.</p>
+            </div>
+          </article>
+          <article class="booking-step">
+            <span>2</span>
+            <div>
+              <h3>Clarify fit and availability</h3>
+              <p>The centre will respond about availability, service fit, session format, and practical details such as fee and appointment time.</p>
+            </div>
+          </article>
+          <article class="booking-step">
+            <span>3</span>
+            <div>
+              <h3>Attend your session</h3>
+              <p>Sessions are available by appointment, either in person at Ampang or online when clinically suitable.</p>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <article class="notice-card">
+            <p class="eyebrow">Fees</p>
+            <h3>Session fees are available upon enquiry.</h3>
+            <p>Fees may vary depending on service type, session format, and assessment needs. You are welcome to ask about fees before confirming an appointment.</p>
+          </article>
+          <article class="notice-card">
+            <p class="eyebrow">Crisis support</p>
+            <h3>This centre is not an emergency service.</h3>
+            <p>If you are in immediate danger or may harm yourself or someone else, please contact local emergency services, go to the nearest hospital emergency department, or reach out to a crisis helpline in your area.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section content-section" id="approach">
       <div class="care">
         <div>
@@ -1132,22 +1547,30 @@
       </div>
 
       <div class="faq-list">
-        <article class="faq-item">
-          <h3>Do I need a diagnosis to start therapy?</h3>
+        <details class="faq-item">
+          <summary><h3>Do I need a diagnosis to start therapy?</h3></summary>
           <p>No. Many clients come for therapy because they feel stuck, overwhelmed, self-critical, anxious, low, disconnected or unsure how to make sense of what they are feeling.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Is Emotion Focused Therapy only about talking about feelings?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Is Emotion Focused Therapy only about talking about feelings?</h3></summary>
           <p>Not exactly. EFT helps you understand emotional patterns, unmet needs and inner conflicts, then work with them safely so change can become more possible.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Can I attend online therapy?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Can I attend online therapy?</h3></summary>
           <p>Yes. Depending on fit and clinical needs, sessions may be arranged in person or online. You can ask about the best option when making an appointment.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Are appointments confidential?</h3>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Are appointments confidential?</h3></summary>
           <p>Sessions are handled with professional confidentiality, within the usual ethical and legal limits such as risk of harm, safeguarding concerns or legal requirements.</p>
-        </article>
+        </details>
+        <details class="faq-item">
+          <summary><h3>How much are the session fees?</h3></summary>
+          <p>Session fees are available upon enquiry and may vary depending on service type, session format, and assessment needs.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Can I contact the centre during a crisis?</h3></summary>
+          <p>The centre is not an emergency service. If there is immediate danger, please contact local emergency services, go to the nearest hospital emergency department, or reach out to a crisis helpline.</p>
+        </details>
       </div>
     </section>
 
@@ -1160,7 +1583,50 @@
           <div class="contact-actions">
             <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp +60 11-1112 3703</a>
             <a class="button button-secondary" href="mailto:sidebypsych@gmail.com">sidebypsych@gmail.com</a>
+            <a class="button button-muted" href="https://www.google.com/maps/search/?api=1&query=A-6-1%2C%20Merdeka%20Place%20Jalan%20MPL%2C%20Jalan%20Merdeka%2C%2068000%20Ampang%2C%20Selangor" target="_blank" rel="noopener">Open in Google Maps</a>
           </div>
+
+          <form class="enquiry-form" id="enquiryForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="enquiryName">Name</label>
+                <input id="enquiryName" name="name" autocomplete="name" placeholder="Your name">
+              </div>
+              <div class="field">
+                <label for="enquiryContact">Phone or email</label>
+                <input id="enquiryContact" name="contact" autocomplete="email" placeholder="How we can reply">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="enquiryMode">Preferred session mode</label>
+                <select id="enquiryMode" name="mode">
+                  <option>In-person appointment</option>
+                  <option>Online appointment</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="enquiryArea">Support area</label>
+                <select id="enquiryArea" name="area">
+                  <option>Individual psychotherapy</option>
+                  <option>Anxiety or depression support</option>
+                  <option>Relationship issues</option>
+                  <option>Psychological assessment</option>
+                  <option>Workshop or psychoeducation</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="enquiryMessage">Brief message</label>
+              <textarea id="enquiryMessage" name="message" placeholder="You may briefly share what support you are looking for."></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit" data-send="whatsapp">Send via WhatsApp</button>
+              <button class="button button-secondary" type="submit" data-send="email">Send via Email</button>
+            </div>
+          </form>
         </div>
 
         <aside class="contact-side" aria-label="Contact details">
@@ -1191,5 +1657,101 @@
       <span>Registration No. 202403299646</span>
     </div>
   </footer>
+  <script>
+    const quotes = [
+      {
+        text: "Your emotions are not your enemy; they are signals asking to be understood.",
+        support: "Therapy offers a safe, professional relationship where painful patterns can be explored with care, not judgment."
+      },
+      {
+        text: "Healing begins when painful emotions are met with safety, not judgment.",
+        support: "Emotion Focused Therapy helps clients slow down, listen inward, and make sense of what has felt overwhelming."
+      },
+      {
+        text: "Behind every strong reaction, there may be an unmet need longing to be heard.",
+        support: "In therapy, emotions can become pathways toward clarity, connection, and more compassionate self-understanding."
+      }
+    ];
+
+    const quoteText = document.querySelector("#quoteText");
+    const quoteSupport = document.querySelector("#quoteSupport");
+    const quoteControls = document.querySelectorAll(".quote-control");
+
+    quoteControls.forEach((button) => {
+      button.addEventListener("click", () => {
+        const quote = quotes[Number(button.dataset.quoteIndex)];
+        quoteText.textContent = quote.text;
+        quoteSupport.textContent = quote.support;
+        quoteControls.forEach((control) => control.setAttribute("aria-pressed", String(control === button)));
+      });
+    });
+
+    const focusCopy = {
+      emotions: "EFT supports clients in noticing emotions, naming what feels difficult, and understanding what those emotions may be trying to protect or express.",
+      relationships: "Relationship struggles often involve repeated emotional patterns. Therapy helps clients explore the needs, fears, and longings underneath those patterns.",
+      self: "Self-criticism can be painful and exhausting. EFT gently explores the vulnerable feelings beneath criticism and supports a kinder relationship with the self."
+    };
+
+    const focusPanel = document.querySelector("#focusPanel");
+    const focusButtons = document.querySelectorAll(".focus-button");
+
+    focusButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        focusPanel.textContent = focusCopy[button.dataset.focus];
+        focusButtons.forEach((control) => control.setAttribute("aria-selected", String(control === button)));
+      });
+    });
+
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        document.querySelectorAll(".faq-item").forEach((other) => {
+          if (other !== item) other.removeAttribute("open");
+        });
+      });
+    });
+
+    const enquiryForm = document.querySelector("#enquiryForm");
+
+    enquiryForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const submitter = event.submitter;
+      const formData = new FormData(enquiryForm);
+      const message = [
+        "Hello Side by Psych Wellness Centre, I would like to ask about an appointment.",
+        "",
+        `Name: ${formData.get("name") || "-"}`,
+        `Contact: ${formData.get("contact") || "-"}`,
+        `Preferred session mode: ${formData.get("mode") || "-"}`,
+        `Support area: ${formData.get("area") || "-"}`,
+        `Message: ${formData.get("message") || "-"}`
+      ].join("\n");
+
+      if (submitter?.dataset.send === "email") {
+        const subject = encodeURIComponent("Appointment enquiry - Side by Psych Wellness Centre");
+        window.location.href = `mailto:sidebypsych@gmail.com?subject=${subject}&body=${encodeURIComponent(message)}`;
+        return;
+      }
+
+      window.open(`https://wa.me/601111123703?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    });
+
+    const revealTargets = document.querySelectorAll(".language-card, .photo-card, .founder, .eft-card, .eft-points li, .service, .booking-card, .notice-card, .care, .faq-item, .contact-main, .contact-side");
+    revealTargets.forEach((target) => target.classList.add("reveal"));
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.16 });
+
+      revealTargets.forEach((target) => observer.observe(target));
+    } else {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+    }
+  </script>
 </body>
 </html>
