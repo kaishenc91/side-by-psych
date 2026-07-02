@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Side by Psych Wellness Centre | Mental Health Support in Ampang</title>
-  <meta name="description" content="Side by Psych Wellness Centre provides professional psychological and counselling support in Ampang, Selangor, with in-person and online appointments.">
+  <title>Side by Psych Wellness Centre | Emotion Focused Therapy in Malaysia</title>
+  <meta name="description" content="Psychotherapy and psychological services by a Registered Clinical Psychologist in Ampang, Malaysia. Emotion Focused Therapy-informed support for anxiety, depression, relationship issues and emotional struggles.">
   <meta name="theme-color" content="#7a6547">
   <style>
     :root {
@@ -100,6 +100,13 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
+    }
+
+    .brand-name em {
+      color: var(--muted);
+      font-size: 12px;
+      font-style: normal;
+      letter-spacing: 0;
     }
 
     .nav-links {
@@ -254,6 +261,36 @@
       color: #435047;
       font-size: 13px;
       font-weight: 700;
+    }
+
+    .quote-band {
+      margin-top: 28px;
+      padding: 34px 0;
+      border-block: 1px solid var(--line);
+      background: rgba(232, 238, 230, 0.74);
+    }
+
+    .quote-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.44fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .quote-inner blockquote {
+      margin: 0;
+      color: #354238;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(24px, 3.2vw, 40px);
+      line-height: 1.18;
+    }
+
+    .quote-inner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .hero-panel {
@@ -421,6 +458,11 @@
       font-size: 18px;
     }
 
+    .founder-copy > p:not(.eyebrow) {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
     .credentials {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -477,45 +519,6 @@
       background: var(--brand);
     }
 
-    .intro-band {
-      margin-top: 28px;
-      padding: 28px 0;
-      border-block: 1px solid var(--line);
-      background: var(--soft);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--line);
-    }
-
-    .stat {
-      min-height: 116px;
-      padding: 24px;
-      background: var(--white);
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--brand-dark);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 500;
-    }
-
-    .stat span {
-      display: block;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
     .content-section {
       padding: 74px 0;
     }
@@ -569,6 +572,55 @@
       font-size: 15px;
     }
 
+    .eft-detail {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .eft-card,
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 26px rgba(43, 38, 31, 0.05);
+    }
+
+    .eft-card {
+      padding: 30px;
+    }
+
+    .eft-card p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .eft-points {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .eft-points li {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .eft-points strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .eft-points span {
+      color: var(--muted);
+    }
+
     .care {
       display: grid;
       grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
@@ -601,6 +653,21 @@
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.07);
       color: rgba(255, 255, 255, 0.9);
+    }
+
+    .faq-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .faq-item {
+      padding: 24px;
+    }
+
+    .faq-item p {
+      margin: 10px 0 0;
+      color: var(--muted);
     }
 
     .contact-wrap {
@@ -701,6 +768,8 @@
       .hero,
       .section-heading,
       .founder,
+      .quote-inner,
+      .eft-detail,
       .care,
       .contact-wrap {
         grid-template-columns: 1fr;
@@ -715,8 +784,8 @@
         min-height: 430px;
       }
 
-      .stats,
       .services,
+      .faq-list,
       .photo-grid,
       .credentials {
         grid-template-columns: 1fr;
@@ -772,7 +841,8 @@
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Side by Psych Wellness Centre",
-      "description": "Mental health and wellness centre in Ampang, Selangor offering psychological and counselling support by appointment.",
+      "alternateName": "伴旅心理健康服务",
+      "description": "Psychotherapy and psychological services in Ampang, Selangor by appointment, guided by Emotion Focused Therapy principles and delivered by a Registered Clinical Psychologist.",
       "telephone": "+601111123703",
       "email": "sidebypsych@gmail.com",
       "address": {
@@ -783,7 +853,48 @@
         "postalCode": "68000",
         "addressCountry": "MY"
       },
-      "openingHours": "Mo-Su 09:00-22:00"
+      "openingHours": "Mo-Su 09:00-22:00",
+      "medicalSpecialty": "Clinical Psychology"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a diagnosis to start therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Many clients come for therapy because they feel stuck, overwhelmed, self-critical, anxious, low, disconnected or unsure how to make sense of what they are feeling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Emotion Focused Therapy only about talking about feelings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not exactly. Emotion Focused Therapy helps clients understand emotional patterns, unmet needs and inner conflicts, then work with them safely so change can become more possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I attend online therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depending on fit and clinical needs, sessions may be arranged in person or online. Clients can ask about the best option when making an appointment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are appointments confidential?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sessions are handled with professional confidentiality, within the usual ethical and legal limits such as risk of harm, safeguarding concerns or legal requirements."
+          }
+        }
+      ]
     }
   </script>
 </head>
@@ -795,12 +906,14 @@
         <span class="brand-name">
           <strong>Side by Psych</strong>
           <span>Wellness Centre</span>
+          <em>伴旅心理健康服务</em>
         </span>
       </a>
       <div class="nav-links">
         <a href="#founder">Founder</a>
+        <a href="#eft">EFT</a>
         <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp</a>
       </div>
@@ -812,19 +925,19 @@
       <div>
         <div class="hero-logo-card">
           <img src="assets/logo.jpg" alt="">
-          <span>Professional psychological support by appointment</span>
+          <span>Healing Begins Side by Side</span>
         </div>
-        <p class="eyebrow">Mental health and wellness support in Ampang</p>
-        <h1>Healing begins side by side.</h1>
-        <p class="lead">Side by Psych Wellness Centre offers professional, approachable psychological and counselling support for individuals, children, adolescents, workplaces and communities.</p>
+        <p class="eyebrow">Psychotherapy and clinical psychology services in Malaysia</p>
+        <h1>Psychotherapy that helps you understand emotional pain.</h1>
+        <p class="lead">Side by Psych Wellness Centre provides professional psychological and psychotherapy services by appointment, guided by Emotion Focused Therapy principles and delivered by a Registered Clinical Psychologist.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://wa.me/601111123703">Book an appointment</a>
-          <a class="button button-secondary" href="mailto:sidebypsych@gmail.com">Email the centre</a>
+          <a class="button button-secondary" href="#eft">Learn about EFT</a>
         </div>
         <div class="hero-note" aria-label="Key details">
+          <span class="pill">Emotion Focused Therapy</span>
           <span class="pill">In-person or online</span>
           <span class="pill">By appointment</span>
-          <span class="pill">9:00 AM to 10:00 PM</span>
         </div>
       </div>
 
@@ -835,28 +948,18 @@
             <strong>Ampang, Selangor</strong>
           </div>
           <div class="status-card">
-            <span>Care areas</span>
-            <strong>Psychotherapy, counselling, assessments and psychoeducation</strong>
+            <span>Support areas</span>
+            <strong>Anxiety, depression, relationships and emotional struggles</strong>
           </div>
         </div>
       </aside>
     </section>
 
-    <div class="intro-band">
-      <section class="section stats" aria-label="Centre highlights">
-        <div class="stat">
-          <strong>7 days</strong>
-          <span>Appointment availability from Monday to Sunday.</span>
-        </div>
-        <div class="stat">
-          <strong>1:1</strong>
-          <span>Individual support tailored to each client and their goals.</span>
-        </div>
-        <div class="stat">
-          <strong>Online</strong>
-          <span>Flexible support through in-person or remote sessions.</span>
-        </div>
-      </section>
+    <div class="quote-band">
+      <div class="quote-inner">
+        <blockquote>Your emotions are not your enemy; they are signals asking to be understood.</blockquote>
+        <p>Therapy offers a safe, professional relationship where painful patterns can be explored with care, not judgment.</p>
+      </div>
     </div>
 
     <section class="section photo-section" aria-label="Inside Side by Psych Wellness Centre">
@@ -891,15 +994,16 @@
     <section class="section content-section" id="founder">
       <div class="founder">
         <aside class="founder-card" aria-label="Founder profile">
-          <span class="founder-badge">MAHPC registered</span>
+          <span class="founder-badge">MAHPC registered | MSCP full member</span>
           <h2>Chen Kai Shen</h2>
           <p>Founder and Clinical Psychologist</p>
         </aside>
 
         <div class="founder-copy">
           <p class="eyebrow">Meet the founder</p>
-          <h2>Clinical care shaped by therapy, teaching and community work.</h2>
-          <p class="lead">Kai Shen is a registered Clinical Psychologist who founded Side by Psych Wellness Centre to provide grounded, accessible and professional mental health support in Malaysia.</p>
+          <h2>Clinical care shaped by emotion, safety and professional practice.</h2>
+          <p class="lead">Kai Shen is a Registered Clinical Psychologist and founder of Side by Psych Wellness Centre. His work is grounded in ethical, evidence-based and compassionate psychological practice, with a particular focus on Emotion Focused Therapy.</p>
+          <p>He is registered with MAHPC, a Full Member of the Malaysian Society of Clinical Psychology (MSCP), and has completed Level 3 training / certification in Emotion Focused Therapy.</p>
 
           <div class="credentials" aria-label="Professional credentials">
             <div class="credential">
@@ -908,7 +1012,11 @@
             </div>
             <div class="credential">
               <span>Membership</span>
-              <strong>Full Member, Malaysian Society of Clinical Psychology, CP1-0540</strong>
+              <strong>Full Member, Malaysian Society of Clinical Psychology (MSCP), CP1-0540</strong>
+            </div>
+            <div class="credential">
+              <span>EFT Training</span>
+              <strong>Emotion Focused Therapy Level 3 trained / certified practitioner</strong>
             </div>
             <div class="credential">
               <span>Education</span>
@@ -922,50 +1030,81 @@
 
           <ul class="founder-points">
             <li>Clinical experience in psychological consultation, diagnostic assessment and psychotherapy with a range of clients.</li>
-            <li>Therapy training and practice across Emotion-Focused Therapy, ACT, DBT, mindfulness-based therapy, CBT, solution-focused work and expressive approaches.</li>
-            <li>Academic and teaching experience as a psychology lecturer, with a background in research and student supervision.</li>
-            <li>Community experience supporting B40 families through psychoeducation, case management and resilience-building work.</li>
+            <li>Emotion Focused Therapy-informed care for emotional pain, anxiety, depression, self-criticism, relational wounds and unresolved needs.</li>
+            <li>Academic, teaching and community experience supporting mental health education, psychological awareness and reflective growth.</li>
+            <li>A calm, collaborative style that respects each client's pace, privacy and readiness for change.</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <section class="section content-section" id="eft">
+      <div class="section-heading">
+        <h2>Emotion Focused Therapy helps make sense of what hurts.</h2>
+        <p>In EFT, emotions are not treated as problems to be removed. They are meaningful signals that can point toward unmet needs, painful experiences, protective patterns and parts of the self that are asking to be heard.</p>
+      </div>
+
+      <div class="eft-detail">
+        <article class="eft-card">
+          <p class="eyebrow">Emotion Focused Therapy</p>
+          <h3>What is EFT?</h3>
+          <p>Emotion Focused Therapy is a psychotherapy approach that helps clients become more aware of what they feel, understand why certain emotional patterns repeat, and gradually transform painful emotional responses into more adaptive ways of relating to themselves and others.</p>
+          <p>Sessions may involve slowing down, noticing the body and emotions, naming inner experiences, exploring self-criticism or unresolved hurt, and making space for deeper needs such as safety, connection, validation or self-acceptance.</p>
+        </article>
+
+        <ul class="eft-points">
+          <li>
+            <strong>Who EFT may support</strong>
+            <span>People experiencing emotional struggles, anxiety, depression, relationship issues, loneliness, grief, self-criticism, trauma-related emotional pain or life transitions.</span>
+          </li>
+          <li>
+            <strong>What happens in therapy</strong>
+            <span>The work is collaborative and paced carefully. You are supported to explore your inner world safely, understand protective patterns and contact emotions without being overwhelmed.</span>
+          </li>
+          <li>
+            <strong>Why working with emotion matters</strong>
+            <span>Emotions often carry the story of what has mattered, what has hurt and what is needed. When approached safely, they can become a pathway toward clarity, compassion and change.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section content-section" id="services">
       <div class="section-heading">
-        <h2>Support for personal, family and workplace wellbeing.</h2>
-        <p>The centre provides focused psychological services with a calm, practical and respectful approach to care.</p>
+        <h2>Psychological support for emotional and relational wellbeing.</h2>
+        <p>The centre provides psychotherapy and psychological services with a calm, ethical and respectful approach to care.</p>
       </div>
 
       <div class="services">
         <article class="service">
           <span class="number">01</span>
           <h3>Individual psychotherapy</h3>
-          <p>Support for emotional wellbeing, coping, life transitions, stress, self-growth and personal challenges.</p>
+          <p>Support for emotional pain, stress, self-understanding, life transitions, grief, loneliness and personal growth.</p>
         </article>
         <article class="service">
           <span class="number">02</span>
-          <h3>Child and adolescent therapy</h3>
-          <p>Developmentally sensitive support for younger clients and families navigating emotional or behavioural concerns.</p>
+          <h3>Anxiety and depression support</h3>
+          <p>Therapy for clients navigating anxiety, low mood, emotional shutdown, hopelessness, overwhelm or persistent worry.</p>
         </article>
         <article class="service">
           <span class="number">03</span>
-          <h3>Career counselling and assessments</h3>
-          <p>Guidance and assessment services for career direction, personal insight and informed decision-making.</p>
+          <h3>Relationship issues</h3>
+          <p>Support for relational wounds, communication difficulties, attachment patterns, unmet needs and emotional disconnection.</p>
         </article>
         <article class="service">
           <span class="number">04</span>
-          <h3>Workshops and psychoeducation</h3>
-          <p>Practical learning sessions for schools, organisations and communities seeking mental health awareness.</p>
+          <h3>Self-criticism and shame</h3>
+          <p>Gentle work with inner criticism, shame, guilt, perfectionism and the vulnerable emotions underneath them.</p>
         </article>
         <article class="service">
           <span class="number">05</span>
-          <h3>Corporate wellness</h3>
-          <p>Supportive programmes that help teams build healthier communication, resilience and workplace wellbeing.</p>
+          <h3>Psychological assessment</h3>
+          <p>Professional psychological consultation and assessment where clinically appropriate, with clear communication about next steps.</p>
         </article>
         <article class="service">
           <span class="number">06</span>
-          <h3>Creative therapy and self-growth</h3>
-          <p>Reflective, expressive approaches for clients who benefit from creative ways of exploring change and healing.</p>
+          <h3>Psychoeducation and workshops</h3>
+          <p>Mental health education for individuals, families, schools, workplaces and communities seeking practical understanding.</p>
         </article>
       </div>
     </section>
@@ -974,15 +1113,41 @@
       <div class="care">
         <div>
           <p class="eyebrow">Our approach</p>
-          <h2>Professional care that feels grounded and human.</h2>
-          <p>Side by Psych is built around the idea that healing is not something people have to do alone. Sessions are designed to be collaborative, respectful and practical, with support shaped around the person in front of us.</p>
+          <h2>Professional care that feels grounded, human and emotionally safe.</h2>
+          <p>Side by Psych is built around the idea that people are not broken; they are often stuck in painful emotional patterns that once made sense. Therapy creates space to understand those patterns with care and to explore new ways of responding.</p>
         </div>
         <ul class="care-list">
-          <li>Confidential, appointment-based support for a focused and private experience.</li>
-          <li>Accessible mental health services for individuals, families, schools and workplaces.</li>
-          <li>Clear communication through WhatsApp, phone or email before booking.</li>
-          <li>Flexible in-person and online options to suit different needs and schedules.</li>
+          <li>Confidential, appointment-based psychotherapy in a focused and private setting.</li>
+          <li>Emotion Focused Therapy-informed support for inner conflict, emotional pain and relationship patterns.</li>
+          <li>Ethical, evidence-informed practice guided by professional registration and clinical training.</li>
+          <li>Flexible in-person and online options for clients in Ampang, Kuala Lumpur, Selangor and Malaysia.</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section content-section" id="faq">
+      <div class="section-heading">
+        <h2>Questions before starting therapy.</h2>
+        <p>A few practical answers for clients considering psychotherapy, clinical psychology support or Emotion Focused Therapy at Side by Psych Wellness Centre.</p>
+      </div>
+
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>Do I need a diagnosis to start therapy?</h3>
+          <p>No. Many clients come for therapy because they feel stuck, overwhelmed, self-critical, anxious, low, disconnected or unsure how to make sense of what they are feeling.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is Emotion Focused Therapy only about talking about feelings?</h3>
+          <p>Not exactly. EFT helps you understand emotional patterns, unmet needs and inner conflicts, then work with them safely so change can become more possible.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I attend online therapy?</h3>
+          <p>Yes. Depending on fit and clinical needs, sessions may be arranged in person or online. You can ask about the best option when making an appointment.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Are appointments confidential?</h3>
+          <p>Sessions are handled with professional confidentiality, within the usual ethical and legal limits such as risk of harm, safeguarding concerns or legal requirements.</p>
+        </article>
       </div>
     </section>
 
@@ -991,7 +1156,7 @@
         <div class="contact-main">
           <p class="eyebrow">Book a session</p>
           <h2>Start with a simple message.</h2>
-          <p>Appointments are available daily from 9:00 AM to 10:00 PM. Reach out through WhatsApp or email to ask about availability, service fit or next steps.</p>
+          <p>Psychotherapy and psychological services are available by appointment. Reach out through WhatsApp or email to ask about availability, service fit or next steps.</p>
           <div class="contact-actions">
             <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp +60 11-1112 3703</a>
             <a class="button button-secondary" href="mailto:sidebypsych@gmail.com">sidebypsych@gmail.com</a>
