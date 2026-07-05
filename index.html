@@ -1097,8 +1097,22 @@
     }
 
     @media (max-width: 560px) {
-      .nav-links a:not(.button) {
+      .nav-links a:not(.button):not(.language-link) {
         display: none;
+      }
+
+      .nav-links .language-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--brand-dark);
+        background: var(--white);
+        font-weight: 800;
+        white-space: nowrap;
       }
 
       .brand-name strong {
@@ -1245,7 +1259,7 @@
         <a href="#founder">Founder</a>
         <a href="#eft">EFT</a>
         <a href="#services">Services</a>
-        <a href="mandarin.html">中文</a>
+        <a class="language-link" href="mandarin.html">中文</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp</a>
