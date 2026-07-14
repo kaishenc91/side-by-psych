@@ -293,8 +293,8 @@
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.44fr);
-      gap: 36px;
+      grid-template-columns: 150px minmax(0, 0.8fr) minmax(240px, 0.44fr);
+      gap: 28px;
       align-items: center;
     }
 
@@ -315,6 +315,44 @@
     .quote-copy {
       display: grid;
       gap: 18px;
+    }
+
+    .sisi-figure {
+      margin: 0;
+      pointer-events: none;
+    }
+
+    .sisi-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 12px 18px rgba(43, 38, 31, 0.08));
+      transform-origin: 44% 78%;
+      animation: sisiBreathe 6.4s ease-in-out infinite;
+    }
+
+    .sisi-figure--calm {
+      width: 150px;
+      justify-self: center;
+    }
+
+    .sisi-figure--listening {
+      width: min(220px, 46%);
+      margin: 18px 0 0 auto;
+    }
+
+    .sisi-figure--listening img {
+      animation-delay: -2.1s;
+    }
+
+    .sisi-figure--eft {
+      width: 210px;
+      align-self: end;
+      justify-self: center;
+    }
+
+    .sisi-figure--eft img {
+      animation-delay: -4.2s;
     }
 
     .quote-controls {
@@ -699,8 +737,8 @@
 
     .eft-detail {
       display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
-      gap: 30px;
+      grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 1fr) minmax(160px, 0.42fr);
+      gap: 24px;
       align-items: start;
     }
 
@@ -908,6 +946,17 @@
       }
     }
 
+    @keyframes sisiBreathe {
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-4px) scale(1.01);
+      }
+    }
+
     .contact-wrap {
       display: grid;
       grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
@@ -1079,6 +1128,22 @@
         gap: 34px;
       }
 
+      .quote-inner {
+        grid-template-columns: 128px minmax(0, 1fr);
+        gap: 24px;
+      }
+
+      .quote-copy {
+        grid-column: 1 / -1;
+      }
+
+      .sisi-figure--listening,
+      .sisi-figure--eft {
+        width: 210px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
       .hero-panel {
         min-height: 430px;
         animation: none;
@@ -1130,6 +1195,15 @@
       .hero-panel {
         min-height: 390px;
         background-size: 88% auto;
+      }
+
+      .quote-inner {
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .sisi-figure--calm {
+        width: 96px;
       }
 
       .panel-content {
@@ -1223,16 +1297,16 @@
           <img src="assets/logo.jpg" alt="">
           <span>Healing Begins Side by Side</span>
         </div>
-        <p class="eyebrow">马来西亚心理治疗与临床心理服务</p>
+        <p class="eyebrow">马来西亚临床心理师提供的心理治疗服务</p>
         <h1>陪你理解情绪，也陪你理解自己。</h1>
-        <p class="lead">伴旅心理健康服务提供以预约为主的心理治疗与心理支持，由注册临床心理师提供。我们的工作结合 Emotion Focused Therapy 情绪取向治疗理念，协助来谈者理解情绪痛苦、关系模式、自我批评、焦虑、低落与生活压力。</p>
+        <p class="lead">伴旅心理健康服务提供预约制心理治疗与心理支持，由注册临床心理师主理。我们以情绪取向治疗（Emotion Focused Therapy，EFT）为主要取向，陪伴您理解情绪困扰、人际关系模式、自我批评、焦虑、低落与生活压力。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://wa.me/601111123703">预约咨询</a>
           <a class="button button-secondary" href="#eft">了解情绪取向治疗</a>
         </div>
         <div class="hero-note" aria-label="主要资料">
           <span class="pill">Emotion Focused Therapy</span>
-          <span class="pill">中文、英文、马来文</span>
+          <span class="pill">中文、英文或马来文</span>
           <span class="pill">需提前预约</span>
         </div>
       </div>
@@ -1245,7 +1319,7 @@
           </div>
           <div class="status-card">
             <span>支持范围</span>
-            <strong>焦虑、抑郁、关系困扰、情绪困扰与自我批评</strong>
+            <strong>焦虑、抑郁、人际关系、情绪困扰与自我批评</strong>
           </div>
         </div>
       </aside>
@@ -1253,9 +1327,12 @@
 
     <div class="quote-band">
       <div class="quote-inner">
-        <blockquote id="quoteText">情绪不是敌人；它们常常是在提醒我们，有些重要的东西需要被理解。</blockquote>
+        <figure class="sisi-figure sisi-figure--calm" aria-hidden="true">
+          <img src="assets/sisi-calm.webp" alt="" width="640" height="640">
+        </figure>
+        <blockquote id="quoteText">情绪不是敌人。它常常在提醒我们：有些重要的感受，需要被好好理解。</blockquote>
         <div class="quote-copy">
-          <p id="quoteSupport">治疗提供一个安全、专业的关系，让痛苦的情绪和反复出现的内在模式可以被慢慢探索，而不是被批评。</p>
+          <p id="quoteSupport">心理治疗提供一个安全而专业的关系，让情绪困扰与反复出现的内在模式，可以被慢慢看见，而不是被批评。</p>
           <div class="quote-controls" aria-label="选择反思句子">
             <button class="quote-control" type="button" aria-label="显示第一句" aria-pressed="true" data-quote-index="0">1</button>
             <button class="quote-control" type="button" aria-label="显示第二句" aria-pressed="false" data-quote-index="1">2</button>
@@ -1267,28 +1344,28 @@
 
     <section class="section content-section" id="intro">
       <div class="section-heading">
-        <h2>心理治疗不只是“解决问题”，也是理解你为什么会这样痛。</h2>
-        <p>我们相信人并不是坏掉了。很多时候，人只是被困在长期形成的情绪与关系模式里。治疗的目标，是在安全、尊重与专业的关系中，慢慢理解这些模式，并探索更有弹性的回应方式。</p>
+        <h2>心理治疗不只是“解决问题”，也包括理解：为什么您会这样痛。</h2>
+        <p>我们相信，您不是坏掉了，也不是太脆弱。很多时候，人只是被困在长期形成的情绪与人际关系模式里。治疗的过程，是在安全、尊重与专业的关系中，慢慢理解这些模式，并探索更有弹性的回应方式。</p>
       </div>
 
       <div class="bilingual-grid">
         <article class="language-card reveal">
           <p class="eyebrow">中文服务</p>
-          <h3>可以用你熟悉的语言谈重要的事。</h3>
-          <p>有些情绪、家庭经验、关系伤痛或内在挣扎，用母语表达会更自然。来谈者可以根据沟通需要，以中文、英文或马来文进行咨询。</p>
+          <h3>可以用您最自在的语言，谈重要的事。</h3>
+          <p>有些情绪、家庭经历、人际关系里的伤，或说不清的内在挣扎，用熟悉的语言表达会更贴近自己。您可以选择以中文、英文或马来文进行心理治疗。</p>
         </article>
         <article class="language-card reveal">
           <p class="eyebrow">治疗关系</p>
           <h3>安全感是治疗工作的基础。</h3>
-          <p>在治疗中，你不需要急着“变好”。我们会先理解你目前的状态、情绪背后的意义，以及那些让你感到卡住的内在模式。</p>
+          <p>在治疗中，您不需要急着“变好”。我们会先一起理解您目前的状态、情绪背后的意义，以及那些让您感到卡住的内在模式。</p>
         </article>
       </div>
     </section>
 
     <section class="section photo-section" aria-label="中心环境照片">
       <div class="section-heading">
-        <h2>一个安静、私密、适合谈话的空间。</h2>
-        <p>以下为中心实景照片，方便你在预约前了解大概环境。</p>
+        <h2>一个安静、私密，也适合慢慢谈话的空间。</h2>
+        <p>以下为中心实景照片，让您在预约前可以先大致了解环境。</p>
       </div>
       <div class="photo-grid">
         <figure class="photo-card featured">
@@ -1297,7 +1374,7 @@
         </figure>
         <figure class="photo-card">
           <img src="assets/tulip-table.jpg" alt="咨询室里的鲜花与桌面细节">
-          <figcaption class="photo-label">让抵达变得柔和一点</figcaption>
+          <figcaption class="photo-label">让抵达的那一刻，也柔和一点</figcaption>
         </figure>
         <figure class="photo-card">
           <img src="assets/therapy-room.jpg" alt="温暖木质元素的治疗室">
@@ -1308,54 +1385,58 @@
 
     <section class="section content-section" id="eft">
       <div class="section-heading">
-        <h2>什么是 Emotion Focused Therapy 情绪取向治疗？</h2>
-        <p>情绪取向治疗认为，情绪不是需要被消除的问题。情绪常常带着重要讯息：我们受过什么伤、在保护什么、需要什么，以及哪些内在部分还没有被理解。</p>
+        <h2>什么是情绪取向治疗（Emotion Focused Therapy，EFT）？</h2>
+        <p>情绪取向治疗认为，情绪不是要被消除的问题。情绪常常带着重要讯息：哪些经历曾经让我们受伤，哪些反应曾经保护我们，我们真正需要什么，以及内在有哪些部分还没有被理解。</p>
       </div>
 
       <div class="eft-detail">
         <article class="eft-card">
           <p class="eyebrow">Emotion Focused Therapy</p>
           <h3>治疗中会发生什么？</h3>
-          <p>治疗师会协助你慢下来，留意身体感受、情绪、内在声音与关系反应。我们会一起理解自我批评、羞耻、害怕、愤怒、悲伤或麻木背后更深层的需要。</p>
-          <p>当情绪在安全的关系中被理解、被处理，它可能不再只是让你失控或逃避的东西，而可以成为改变、自我同情与关系修复的入口。</p>
+          <p>临床心理师会陪您慢下来，留意身体感受、情绪、内在声音与人际关系中的反应。我们会一起理解自我批评、羞耻、害怕、愤怒、悲伤或麻木背后，更深层的需要。</p>
+          <p>当情绪在安全的治疗关系中被理解、被处理，它就不只是让您失控或想逃开的东西，也可能成为改变、自我关怀与修复人际关系的入口。</p>
           <div class="focus-tool" aria-label="治疗焦点">
             <div class="focus-buttons" role="tablist" aria-label="治疗焦点">
               <button class="focus-button" type="button" role="tab" aria-selected="true" data-focus="emotions">情绪</button>
-              <button class="focus-button" type="button" role="tab" aria-selected="false" data-focus="relationships">关系</button>
+              <button class="focus-button" type="button" role="tab" aria-selected="false" data-focus="relationships">人际关系</button>
               <button class="focus-button" type="button" role="tab" aria-selected="false" data-focus="self">自我批评</button>
             </div>
-            <p class="focus-panel" id="focusPanel">EFT 协助来谈者觉察情绪、命名困难，并理解情绪可能正在保护或表达什么。</p>
+            <p class="focus-panel" id="focusPanel">EFT 协助您发展情绪觉察，慢慢为困扰命名，也理解情绪正在保护什么、表达什么。</p>
           </div>
         </article>
 
         <ul class="eft-points">
           <li>
             <strong>适合哪些困扰？</strong>
-            <span>焦虑、抑郁、情绪低落、关系困扰、孤独、自我批评、羞耻感、创伤相关情绪痛苦、哀伤与生活转变。</span>
+            <span>焦虑、抑郁、情绪低落、人际关系困扰、孤独、自我批评、羞耻感、创伤相关的情绪困扰、哀伤与生活转变。</span>
           </li>
           <li>
             <strong>治疗节奏如何？</strong>
-            <span>治疗会根据你的状态与准备程度逐步进行。重点不是逼你马上面对所有情绪，而是在足够安全的情况下慢慢接近、理解和处理。</span>
+            <span>治疗会根据您的状态与准备程度逐步进行。重点不是逼您马上面对所有情绪，而是在足够安全的情况下，慢慢靠近、理解和处理。</span>
           </li>
           <li>
             <strong>为什么情绪工作重要？</strong>
-            <span>情绪往往记录了我们在乎什么、失去了什么、害怕什么，以及真正需要什么。被安全地理解后，情绪可以成为改变的方向。</span>
+            <span>情绪往往记录着我们在乎什么、失去了什么、害怕什么，以及真正需要什么。当情绪被安全地理解，它也可能成为改变的方向。</span>
           </li>
         </ul>
+
+        <figure class="sisi-figure sisi-figure--eft" aria-hidden="true">
+          <img src="assets/sisi-self-compassion.webp" alt="" width="640" height="640" loading="lazy">
+        </figure>
       </div>
     </section>
 
     <section class="section content-section" id="services">
       <div class="section-heading">
         <h2>心理治疗与心理服务。</h2>
-        <p>服务以预约为主，适合希望理解自己、处理情绪困扰、改善关系模式或寻求专业心理支持的人士。</p>
+        <p>服务以预约制进行，适合希望更理解自己、处理情绪困扰、改善人际关系模式，或寻求专业心理支持的人士。</p>
       </div>
 
       <div class="services">
         <article class="service">
           <span class="number">01</span>
           <h3>个人心理治疗</h3>
-          <p>支持情绪痛苦、压力、自我理解、人生转变、哀伤、孤独与个人成长。</p>
+          <p>支持情绪困扰、压力、自我理解、人生转变、哀伤、孤独与个人成长。</p>
         </article>
         <article class="service">
           <span class="number">02</span>
@@ -1364,8 +1445,8 @@
         </article>
         <article class="service">
           <span class="number">03</span>
-          <h3>关系困扰</h3>
-          <p>探索关系中的重复模式、沟通困难、依附需要、情绪断联与未被满足的需要。</p>
+          <h3>人际关系困扰</h3>
+          <p>探索人际关系中的重复模式、沟通困难、依附需要、情绪疏离与未被满足的需要。</p>
         </article>
         <article class="service">
           <span class="number">04</span>
@@ -1375,7 +1456,7 @@
         <article class="service">
           <span class="number">05</span>
           <h3>心理评估与咨询</h3>
-          <p>在合适的临床情况下提供心理咨询、初步理解与下一步建议。</p>
+          <p>在合适的临床情况下，提供心理咨询、初步理解与下一步建议。</p>
         </article>
         <article class="service">
           <span class="number">06</span>
@@ -1395,17 +1476,17 @@
 
         <div class="founder-copy">
           <p class="eyebrow">创办人</p>
-          <h2>以情绪、安全感与专业伦理为核心的临床工作。</h2>
-          <p class="lead">Kai Shen 是注册临床心理师，也是 Side by Psych Wellness Centre 的创办人。他的工作重视伦理、循证实践与有温度的专业陪伴，并以 Emotion Focused Therapy 作为主要治疗取向之一。</p>
+          <h2>临床工作以情绪、安全感与专业伦理为核心。</h2>
+          <p class="lead">Kai Shen 是注册临床心理师，也是 Side by Psych Wellness Centre 的创办人。他的临床工作重视专业伦理、循证实践与有温度的陪伴，并以情绪取向治疗（Emotion Focused Therapy，EFT）作为主要治疗取向之一。</p>
           <p>他已完成 Emotion Focused Therapy Level 3 训练 / 认证，并为 Malaysian Society of Clinical Psychology (MSCP) 正式会员。</p>
 
           <div class="credentials" aria-label="专业资格">
             <div class="credential">
-              <span>注册</span>
+              <span>注册资格</span>
               <strong>Registered Clinical Psychologist, MAHPC Reg No. MAHPC(CP)00565</strong>
             </div>
             <div class="credential">
-              <span>会员</span>
+              <span>专业会员</span>
               <strong>Full Member, Malaysian Society of Clinical Psychology (MSCP), CP1-0540</strong>
             </div>
             <div class="credential">
@@ -1413,10 +1494,13 @@
               <strong>Emotion Focused Therapy Level 3 trained / certified practitioner</strong>
             </div>
             <div class="credential">
-              <span>语言</span>
+              <span>咨询语言</span>
               <strong>中文、英文、马来文</strong>
             </div>
           </div>
+          <figure class="sisi-figure sisi-figure--listening" aria-hidden="true">
+            <img src="assets/sisi-listening.webp" alt="" width="640" height="640" loading="lazy">
+          </figure>
         </div>
       </div>
     </section>
@@ -1424,7 +1508,7 @@
     <section class="section content-section" id="booking">
       <div class="section-heading">
         <h2>预约流程。</h2>
-        <p>所有心理治疗与心理服务需提前预约。你可以先发送简短信息，说明你想寻求什么支持。</p>
+        <p>所有心理治疗与心理服务均需提前预约。您可以先发送一则简短信息，告诉我们您希望获得哪方面的支持。</p>
       </div>
 
       <div class="booking-grid">
@@ -1433,14 +1517,14 @@
             <span>1</span>
             <div>
               <h3>发送简短询问</h3>
-              <p>通过 WhatsApp、电子邮件或下方表格留下姓名、联系方式、偏好的咨询方式，以及你希望获得的支持。</p>
+              <p>通过 WhatsApp、电邮或下方表格留下姓名、联系方式、偏好的咨询方式，以及您希望获得的支持。</p>
             </div>
           </article>
           <article class="booking-step">
             <span>2</span>
             <div>
-              <h3>确认合适度与时间</h3>
-              <p>中心会回复关于服务合适度、预约时间、咨询方式与费用等实际资料。</p>
+              <h3>确认服务适合度与时间</h3>
+              <p>中心会回复有关服务适合度、预约时间、咨询方式与费用等实际资料。</p>
             </div>
           </article>
           <article class="booking-step">
@@ -1456,12 +1540,12 @@
           <article class="notice-card">
             <p class="eyebrow">费用</p>
             <h3>咨询费用可在询问时了解。</h3>
-            <p>费用可能因服务类型、咨询形式与评估需要而不同。你可以在确认预约前先询问费用。</p>
+            <p>费用可能因服务类型、咨询形式与评估需要而不同。您可以在确认预约前先询问费用。</p>
           </article>
           <article class="notice-card">
             <p class="eyebrow">紧急情况</p>
             <h3>本中心不是紧急危机服务。</h3>
-            <p>如果你或他人处于即时危险，请联系当地紧急服务、前往最近的医院急诊部，或联系危机热线。</p>
+            <p>如果您或他人正处于即时危险，请联系当地紧急服务、前往最近的医院急诊部，或联系危机热线。</p>
           </article>
         </div>
       </div>
@@ -1470,21 +1554,21 @@
     <section class="section content-section" id="faq">
       <div class="section-heading">
         <h2>常见问题。</h2>
-        <p>以下资料可帮助你在开始心理治疗前了解基本安排。</p>
+        <p>以下资料可帮助您在开始心理治疗前，先了解基本安排。</p>
       </div>
 
       <div class="faq-list">
         <details class="faq-item">
           <summary><h3>我一定要有诊断才能开始治疗吗？</h3></summary>
-          <p>不一定。很多人开始治疗，是因为感到情绪卡住、压力大、焦虑、低落、自我批评、关系困难，或想更理解自己。</p>
+          <p>不一定。很多人开始心理治疗，是因为感到情绪卡住、压力太大、焦虑、低落、自我批评、人际关系困难，或只是想更理解自己。</p>
         </details>
         <details class="faq-item">
           <summary><h3>EFT 是否只是谈情绪？</h3></summary>
-          <p>不是。EFT 会协助你理解情绪模式、内在冲突与未被满足的需要，并在安全的治疗关系中逐步处理这些经验。</p>
+          <p>不是。EFT 会协助您理解情绪模式、内在冲突与未被满足的需要，并在安全的治疗关系中，逐步处理这些经验。</p>
         </details>
         <details class="faq-item">
           <summary><h3>可以线上咨询吗？</h3></summary>
-          <p>可以视情况安排。是否适合线上进行，会根据你的需要、临床情况与治疗目标一起讨论。</p>
+          <p>可以视情况安排。是否适合线上进行，会根据您的需要、临床情况与治疗目标一起讨论。</p>
         </details>
         <details class="faq-item">
           <summary><h3>咨询内容会保密吗？</h3></summary>
@@ -1497,23 +1581,23 @@
       <div class="contact-wrap">
         <div class="contact-main">
           <p class="eyebrow">预约咨询</p>
-          <h2>你可以先发送一则简单信息。</h2>
-          <p>心理治疗与心理服务需提前预约。你可以通过 WhatsApp 或电邮询问服务合适度、时间安排或下一步。</p>
+          <h2>您可以先发送一则简单信息。</h2>
+          <p>心理治疗与心理服务需提前预约。您可以通过 WhatsApp 或电邮询问服务适合度、时间安排或下一步。</p>
           <div class="contact-actions">
             <a class="button button-primary" href="https://wa.me/601111123703">WhatsApp +60 11-1112 3703</a>
             <a class="button button-secondary" href="mailto:hello@sidebypsych.com">hello@sidebypsych.com</a>
-            <a class="button button-muted" href="https://www.google.com/maps/search/?api=1&query=A-6-1%2C%20Merdeka%20Place%20Jalan%20MPL%2C%20Jalan%20Merdeka%2C%2068000%20Ampang%2C%20Selangor" target="_blank" rel="noopener">打开 Google Maps</a>
+            <a class="button button-muted" href="https://www.google.com/maps/search/?api=1&query=A-6-1%2C%20Merdeka%20Place%20Jalan%20MPL%2C%20Jalan%20Merdeka%2C%2068000%20Ampang%2C%20Selangor" target="_blank" rel="noopener">在 Google Maps 查看地址</a>
           </div>
 
           <form class="enquiry-form" id="enquiryForm">
             <div class="form-row">
               <div class="field">
                 <label for="enquiryName">姓名</label>
-                <input id="enquiryName" name="name" autocomplete="name" placeholder="你的姓名">
+                <input id="enquiryName" name="name" autocomplete="name" placeholder="您的姓名">
               </div>
               <div class="field">
                 <label for="enquiryContact">电话或电邮</label>
-                <input id="enquiryContact" name="contact" autocomplete="email" placeholder="方便回复你的方式">
+                <input id="enquiryContact" name="contact" autocomplete="email" placeholder="方便回复您的方式">
               </div>
             </div>
             <div class="form-row">
@@ -1530,7 +1614,7 @@
                 <select id="enquiryArea" name="area">
                   <option>个人心理治疗</option>
                   <option>焦虑或抑郁支持</option>
-                  <option>关系困扰</option>
+                  <option>人际关系困扰</option>
                   <option>心理评估</option>
                   <option>心理教育或讲座</option>
                   <option>还不确定</option>
@@ -1539,7 +1623,7 @@
             </div>
             <div class="field">
               <label for="enquiryMessage">简短信息</label>
-              <textarea id="enquiryMessage" name="message" placeholder="你可以简单说明目前想寻求什么支持。"></textarea>
+              <textarea id="enquiryMessage" name="message" placeholder="您可以简单说明目前想寻求哪方面的支持。"></textarea>
             </div>
             <div class="form-actions">
               <button class="button button-primary" type="submit" data-send="whatsapp">通过 WhatsApp 发送</button>
@@ -1596,6 +1680,8 @@
     const quoteText = document.querySelector("#quoteText");
     const quoteSupport = document.querySelector("#quoteSupport");
     const quoteControls = document.querySelectorAll(".quote-control");
+    const quoteMascot = document.querySelector(".sisi-figure--calm img");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     quoteControls.forEach((button) => {
       button.addEventListener("click", () => {
@@ -1603,6 +1689,16 @@
         quoteText.textContent = quote.text;
         quoteSupport.textContent = quote.support;
         quoteControls.forEach((control) => control.setAttribute("aria-pressed", String(control === button)));
+        if (!reducedMotion.matches && quoteMascot?.animate) {
+          quoteMascot.animate(
+            [
+              { transform: "translateY(0) rotate(0deg)" },
+              { transform: "translateY(-5px) rotate(-1.5deg)" },
+              { transform: "translateY(0) rotate(0deg)" }
+            ],
+            { duration: 520, easing: "ease-out" }
+          );
+        }
       });
     });
 
@@ -1656,7 +1752,7 @@
       window.open(`https://wa.me/601111123703?text=${encodeURIComponent(message)}`, "_blank", "noopener");
     });
 
-    const revealTargets = document.querySelectorAll(".language-card, .photo-card, .founder, .eft-card, .eft-points li, .service, .booking-card, .notice-card, .care, .faq-item, .contact-main, .contact-side");
+    const revealTargets = document.querySelectorAll(".language-card, .photo-card, .founder, .eft-card, .eft-points li, .sisi-figure--eft, .service, .booking-card, .notice-card, .care, .faq-item, .contact-main, .contact-side");
     revealTargets.forEach((target) => target.classList.add("reveal"));
 
     if ("IntersectionObserver" in window) {

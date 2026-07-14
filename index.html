@@ -289,8 +289,8 @@
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.44fr);
-      gap: 36px;
+      grid-template-columns: 150px minmax(0, 0.8fr) minmax(240px, 0.44fr);
+      gap: 28px;
       align-items: center;
     }
 
@@ -311,6 +311,44 @@
     .quote-copy {
       display: grid;
       gap: 18px;
+    }
+
+    .sisi-figure {
+      margin: 0;
+      pointer-events: none;
+    }
+
+    .sisi-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 12px 18px rgba(43, 38, 31, 0.08));
+      transform-origin: 44% 78%;
+      animation: sisiBreathe 6.4s ease-in-out infinite;
+    }
+
+    .sisi-figure--calm {
+      width: 150px;
+      justify-self: center;
+    }
+
+    .sisi-figure--listening {
+      width: min(220px, 46%);
+      margin: 18px 0 0 auto;
+    }
+
+    .sisi-figure--listening img {
+      animation-delay: -2.1s;
+    }
+
+    .sisi-figure--eft {
+      width: 210px;
+      align-self: end;
+      justify-self: center;
+    }
+
+    .sisi-figure--eft img {
+      animation-delay: -4.2s;
     }
 
     .quote-controls {
@@ -695,8 +733,8 @@
 
     .eft-detail {
       display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
-      gap: 30px;
+      grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 1fr) minmax(160px, 0.42fr);
+      gap: 24px;
       align-items: start;
     }
 
@@ -904,6 +942,17 @@
       }
     }
 
+    @keyframes sisiBreathe {
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-4px) scale(1.01);
+      }
+    }
+
     .contact-wrap {
       display: grid;
       grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
@@ -1075,6 +1124,22 @@
         gap: 34px;
       }
 
+      .quote-inner {
+        grid-template-columns: 128px minmax(0, 1fr);
+        gap: 24px;
+      }
+
+      .quote-copy {
+        grid-column: 1 / -1;
+      }
+
+      .sisi-figure--listening,
+      .sisi-figure--eft {
+        width: 210px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
       .hero-panel {
         min-height: 430px;
         animation: none;
@@ -1126,6 +1191,15 @@
       .hero-panel {
         min-height: 390px;
         background-size: 88% auto;
+      }
+
+      .quote-inner {
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .sisi-figure--calm {
+        width: 96px;
       }
 
       .panel-content {
@@ -1304,6 +1378,9 @@
 
     <div class="quote-band">
       <div class="quote-inner">
+        <figure class="sisi-figure sisi-figure--calm" aria-hidden="true">
+          <img src="assets/sisi-calm.webp" alt="" width="640" height="640">
+        </figure>
         <blockquote id="quoteText">Your emotions are not your enemy; they are signals asking to be understood.</blockquote>
         <div class="quote-copy">
           <p id="quoteSupport">Therapy offers a safe, professional relationship where painful patterns can be explored with care, not judgment.</p>
@@ -1409,6 +1486,9 @@
             <li>Academic, teaching and community experience supporting mental health education, psychological awareness and reflective growth.</li>
             <li>A calm, collaborative style that respects each client's pace, privacy and readiness for change.</li>
           </ul>
+          <figure class="sisi-figure sisi-figure--listening" aria-hidden="true">
+            <img src="assets/sisi-listening.webp" alt="" width="640" height="640" loading="lazy">
+          </figure>
         </div>
       </div>
     </section>
@@ -1449,6 +1529,10 @@
             <span>Emotions often carry the story of what has mattered, what has hurt and what is needed. When approached safely, they can become a pathway toward clarity, compassion and change.</span>
           </li>
         </ul>
+
+        <figure class="sisi-figure sisi-figure--eft" aria-hidden="true">
+          <img src="assets/sisi-self-compassion.webp" alt="" width="640" height="640" loading="lazy">
+        </figure>
       </div>
     </section>
 
@@ -1690,6 +1774,8 @@
     const quoteText = document.querySelector("#quoteText");
     const quoteSupport = document.querySelector("#quoteSupport");
     const quoteControls = document.querySelectorAll(".quote-control");
+    const quoteMascot = document.querySelector(".sisi-figure--calm img");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     quoteControls.forEach((button) => {
       button.addEventListener("click", () => {
@@ -1697,6 +1783,16 @@
         quoteText.textContent = quote.text;
         quoteSupport.textContent = quote.support;
         quoteControls.forEach((control) => control.setAttribute("aria-pressed", String(control === button)));
+        if (!reducedMotion.matches && quoteMascot?.animate) {
+          quoteMascot.animate(
+            [
+              { transform: "translateY(0) rotate(0deg)" },
+              { transform: "translateY(-5px) rotate(-1.5deg)" },
+              { transform: "translateY(0) rotate(0deg)" }
+            ],
+            { duration: 520, easing: "ease-out" }
+          );
+        }
       });
     });
 
@@ -1750,7 +1846,7 @@
       window.open(`https://wa.me/601111123703?text=${encodeURIComponent(message)}`, "_blank", "noopener");
     });
 
-    const revealTargets = document.querySelectorAll(".language-card, .photo-card, .founder, .eft-card, .eft-points li, .service, .booking-card, .notice-card, .care, .faq-item, .contact-main, .contact-side");
+    const revealTargets = document.querySelectorAll(".language-card, .photo-card, .founder, .eft-card, .eft-points li, .sisi-figure--eft, .service, .booking-card, .notice-card, .care, .faq-item, .contact-main, .contact-side");
     revealTargets.forEach((target) => target.classList.add("reveal"));
 
     if ("IntersectionObserver" in window) {
