@@ -1,0 +1,22 @@
+{
+  "name": "Side by Psych Wellness Centre",
+  "short_name": "Side by Psych",
+  "description": "Psychotherapy and clinical psychology services in Ampang, Selangor.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#7a6547",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -11,7 +11,10 @@
   <link rel="alternate" hreflang="en-MY" href="https://sidebypsych.com/">
   <link rel="alternate" hreflang="zh-Hans-MY" href="https://sidebypsych.com/mandarin.html">
   <link rel="alternate" hreflang="x-default" href="https://sidebypsych.com/">
-  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" as="image" href="/assets/hero-room.jpg" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_MY">
@@ -628,6 +631,10 @@
       padding: 74px 0;
     }
 
+    .section-actions {
+      margin-top: 28px;
+    }
+
     .section-heading {
       display: grid;
       grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.58fr);
@@ -1114,6 +1121,12 @@
       flex-wrap: wrap;
     }
 
+    .footer-inner a {
+      color: var(--brand-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     @media (max-width: 900px) {
       .nav {
         align-items: flex-start;
@@ -1280,9 +1293,15 @@
           "@id": "https://sidebypsych.com/mandarin.html#webpage",
           "url": "https://sidebypsych.com/mandarin.html",
           "name": "安邦临床心理师与心理治疗 | 伴旅心理健康服务",
+          "description": "安邦注册临床心理师提供个人心理治疗与情绪取向治疗（EFT），以中文、英文或马来文支持焦虑、抑郁、人际关系与情绪困扰，可预约面谈或线上咨询。",
           "inLanguage": "zh-Hans-MY",
+          "dateModified": "2026-07-24",
           "isPartOf": { "@id": "https://sidebypsych.com/#website" },
-          "about": { "@id": "https://sidebypsych.com/#business" }
+          "about": { "@id": "https://sidebypsych.com/#business" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://sidebypsych.com/assets/hero-room.jpg"
+          }
         },
         {
           "@type": "MedicalBusiness",
@@ -1290,6 +1309,9 @@
           "name": "Side by Psych Wellness Centre",
           "alternateName": "伴旅心理健康服务",
           "url": "https://sidebypsych.com/",
+          "slogan": "Healing Begins Side by Side",
+          "sameAs": ["https://www.instagram.com/sidebypsych/"],
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=A-6-1%2C%20Merdeka%20Place%20Jalan%20MPL%2C%20Jalan%20Merdeka%2C%2068000%20Ampang%2C%20Selangor",
           "description": "位于安邦、需提前预约的心理治疗与临床心理服务，以情绪取向治疗（Emotion Focused Therapy，EFT）为主要治疗取向。",
           "logo": "https://sidebypsych.com/assets/logo.jpg",
           "image": [
@@ -1314,12 +1336,6 @@
             "addressRegion": "Selangor",
             "postalCode": "68000",
             "addressCountry": "MY"
-          },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "09:00",
-            "closes": "22:00"
           },
           "areaServed": [
             { "@type": "City", "name": "Ampang" },
@@ -1391,10 +1407,16 @@
             "@type": "EducationalOccupationalCredential",
             "name": "Emotion Focused Therapy Level 3 training / certification"
           },
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of Cyberjaya"
-          }
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Cyberjaya"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Universiti Tunku Abdul Rahman"
+            }
+          ]
         }
       ]
     }
@@ -1469,7 +1491,7 @@
         </span>
       </a>
       <div class="nav-links">
-        <a href="#eft">情绪取向治疗</a>
+        <a href="/mandarin-eft.html">情绪取向治疗</a>
         <a href="#services">服务</a>
         <a href="#founder">创办人</a>
         <a href="#faq">常见问题</a>
@@ -1488,11 +1510,11 @@
           <span>Healing Begins Side by Side</span>
         </div>
         <p class="eyebrow">安邦注册临床心理师提供的心理治疗服务</p>
-        <h1>陪你理解情绪，也陪你理解自己。</h1>
+        <h1>安邦心理治疗：陪您理解情绪，也更理解自己。</h1>
         <p class="lead">伴旅心理健康服务位于安邦，由注册临床心理师提供预约制心理治疗与心理支持，也欢迎来自雪兰莪与吉隆坡一带的来谈者。我们以情绪取向治疗（Emotion Focused Therapy，EFT）为主要取向，陪伴您理解情绪困扰、人际关系模式、自我批评、焦虑、低落与生活压力。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://wa.me/601111123703">预约咨询</a>
-          <a class="button button-secondary" href="#eft">了解情绪取向治疗</a>
+          <a class="button button-secondary" href="/mandarin-eft.html">了解情绪取向治疗</a>
         </div>
         <div class="hero-note" aria-label="主要资料">
           <span class="pill">Emotion Focused Therapy</span>
@@ -1613,6 +1635,9 @@
         <figure class="sisi-figure sisi-figure--eft" aria-hidden="true">
           <img src="assets/sisi-self-compassion.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
         </figure>
+      </div>
+      <div class="section-actions">
+        <a class="button button-secondary" href="/mandarin-eft.html">进一步了解情绪取向治疗</a>
       </div>
     </section>
 
@@ -1845,8 +1870,12 @@
             <a href="mailto:hello@sidebypsych.com">hello@sidebypsych.com</a>
           </div>
           <div class="contact-row">
-            <span>时间</span>
-            <strong>星期一至星期日，9:00 AM - 10:00 PM</strong>
+            <span>预约时间</span>
+            <strong>仅限预约；欢迎联系查询目前可预约时段。</strong>
+          </div>
+          <div class="contact-row">
+            <span>Instagram</span>
+            <a href="https://www.instagram.com/sidebypsych/" target="_blank" rel="noopener me">@sidebypsych</a>
           </div>
         </aside>
       </div>
@@ -1856,7 +1885,7 @@
   <footer>
     <div class="footer-inner">
       <span>Side by Psych Wellness Centre | 伴旅心理健康服务</span>
-      <span>Registration No. 202403299646</span>
+      <span><a href="/privacy.html#zh">隐私说明</a> | Registration No. 202403299646</span>
     </div>
   </footer>
 
@@ -1968,5 +1997,6 @@
       revealTargets.forEach((target) => target.classList.add("is-visible"));
     }
   </script>
+  <script src="/assets/site-analytics.js?v=20260724" data-measurement-id="G-9S9P15LX9G" defer></script>
 </body>
 </html>

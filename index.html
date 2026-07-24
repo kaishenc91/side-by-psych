@@ -11,7 +11,10 @@
   <link rel="alternate" hreflang="en-MY" href="https://sidebypsych.com/">
   <link rel="alternate" hreflang="zh-Hans-MY" href="https://sidebypsych.com/mandarin.html">
   <link rel="alternate" hreflang="x-default" href="https://sidebypsych.com/">
-  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" as="image" href="/assets/hero-room.jpg" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_MY">
@@ -628,6 +631,10 @@
       padding: 74px 0;
     }
 
+    .section-actions {
+      margin-top: 28px;
+    }
+
     .section-heading {
       display: grid;
       grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.58fr);
@@ -1114,6 +1121,12 @@
       flex-wrap: wrap;
     }
 
+    .footer-inner a {
+      color: var(--brand-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     @media (max-width: 900px) {
       .nav {
         align-items: flex-start;
@@ -1280,9 +1293,15 @@
           "@id": "https://sidebypsych.com/#webpage",
           "url": "https://sidebypsych.com/",
           "name": "Clinical Psychologist in Ampang | Side by Psych",
+          "description": "Registered Clinical Psychologist in Ampang offering individual psychotherapy and Emotion Focused Therapy for anxiety, depression and relationship issues.",
           "inLanguage": "en-MY",
+          "dateModified": "2026-07-24",
           "isPartOf": { "@id": "https://sidebypsych.com/#website" },
-          "about": { "@id": "https://sidebypsych.com/#business" }
+          "about": { "@id": "https://sidebypsych.com/#business" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://sidebypsych.com/assets/hero-room.jpg"
+          }
         },
         {
           "@type": "MedicalBusiness",
@@ -1290,6 +1309,9 @@
           "name": "Side by Psych Wellness Centre",
           "alternateName": "伴旅心理健康服务",
           "url": "https://sidebypsych.com/",
+          "slogan": "Healing Begins Side by Side",
+          "sameAs": ["https://www.instagram.com/sidebypsych/"],
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=A-6-1%2C%20Merdeka%20Place%20Jalan%20MPL%2C%20Jalan%20Merdeka%2C%2068000%20Ampang%2C%20Selangor",
           "description": "Appointment-based psychotherapy and clinical psychology services in Ampang, Selangor, with Emotion Focused Therapy as the main therapeutic approach.",
           "logo": "https://sidebypsych.com/assets/logo.jpg",
           "image": [
@@ -1314,12 +1336,6 @@
             "addressRegion": "Selangor",
             "postalCode": "68000",
             "addressCountry": "MY"
-          },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "09:00",
-            "closes": "22:00"
           },
           "areaServed": [
             { "@type": "City", "name": "Ampang" },
@@ -1394,10 +1410,16 @@
             "@type": "EducationalOccupationalCredential",
             "name": "Emotion Focused Therapy Level 3 training / certification"
           },
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of Cyberjaya"
-          }
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Cyberjaya"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Universiti Tunku Abdul Rahman"
+            }
+          ]
         }
       ]
     }
@@ -1472,7 +1494,7 @@
       </a>
       <div class="nav-links">
         <a href="#founder">Founder</a>
-        <a href="#eft">EFT</a>
+        <a href="/emotion-focused-therapy.html">EFT</a>
         <a href="#services">Services</a>
         <a class="language-link" href="/mandarin.html" lang="zh-Hans" hreflang="zh-Hans-MY">中文</a>
         <a href="#faq">FAQ</a>
@@ -1490,11 +1512,11 @@
           <span>Healing Begins Side by Side</span>
         </div>
         <p class="eyebrow">Registered Clinical Psychologist in Ampang, Selangor</p>
-        <h1>Psychotherapy that helps you understand emotional pain.</h1>
-        <p class="lead">Side by Psych Wellness Centre offers appointment-based individual psychotherapy and psychological services in Ampang and online across Malaysia. Sessions are guided by Emotion Focused Therapy principles and are available in English, Mandarin or Malay.</p>
+        <h1>Psychotherapy in Ampang.</h1>
+        <p class="lead">Emotions are meaningful, even when they feel overwhelming. Side by Psych Wellness Centre offers appointment-based individual psychotherapy and psychological services in Ampang and online across Malaysia. Sessions are guided by Emotion Focused Therapy principles and are available in English, Mandarin or Malay.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://wa.me/601111123703">Book an appointment</a>
-          <a class="button button-secondary" href="#eft">Learn about EFT</a>
+          <a class="button button-secondary" href="/emotion-focused-therapy.html">Learn about EFT</a>
         </div>
         <div class="hero-note" aria-label="Key details">
           <span class="pill">Emotion Focused Therapy</span>
@@ -1674,6 +1696,9 @@
         <figure class="sisi-figure sisi-figure--eft" aria-hidden="true">
           <img src="assets/sisi-self-compassion.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
         </figure>
+      </div>
+      <div class="section-actions">
+        <a class="button button-secondary" href="/emotion-focused-therapy.html">Explore Emotion Focused Therapy</a>
       </div>
     </section>
 
@@ -1883,8 +1908,12 @@
             <a href="mailto:hello@sidebypsych.com">hello@sidebypsych.com</a>
           </div>
           <div class="contact-row">
-            <span>Hours</span>
-            <strong>Monday to Sunday, 9:00 AM to 10:00 PM</strong>
+            <span>Appointments</span>
+            <strong>By appointment only. Please ask about current availability.</strong>
+          </div>
+          <div class="contact-row">
+            <span>Instagram</span>
+            <a href="https://www.instagram.com/sidebypsych/" target="_blank" rel="noopener me">@sidebypsych</a>
           </div>
         </aside>
       </div>
@@ -1894,7 +1923,7 @@
   <footer>
     <div class="footer-inner">
       <span>Side by Psych Wellness Centre</span>
-      <span>Registration No. 202403299646</span>
+      <span><a href="/privacy.html">Privacy</a> | Registration No. 202403299646</span>
     </div>
   </footer>
   <script>
@@ -2005,5 +2034,6 @@
       revealTargets.forEach((target) => target.classList.add("is-visible"));
     }
   </script>
+  <script src="/assets/site-analytics.js?v=20260724" data-measurement-id="G-9S9P15LX9G" defer></script>
 </body>
 </html>

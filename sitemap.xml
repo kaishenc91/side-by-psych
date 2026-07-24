@@ -3,16 +3,30 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sidebypsych.com/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en-MY" href="https://sidebypsych.com/" />
     <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://sidebypsych.com/mandarin.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sidebypsych.com/" />
   </url>
   <url>
     <loc>https://sidebypsych.com/mandarin.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en-MY" href="https://sidebypsych.com/" />
     <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://sidebypsych.com/mandarin.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sidebypsych.com/" />
+  </url>
+  <url>
+    <loc>https://sidebypsych.com/emotion-focused-therapy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://sidebypsych.com/emotion-focused-therapy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://sidebypsych.com/mandarin-eft.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sidebypsych.com/emotion-focused-therapy.html" />
+  </url>
+  <url>
+    <loc>https://sidebypsych.com/mandarin-eft.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://sidebypsych.com/emotion-focused-therapy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://sidebypsych.com/mandarin-eft.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sidebypsych.com/emotion-focused-therapy.html" />
   </url>
 </urlset>
