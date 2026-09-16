@@ -631,10 +631,6 @@
       padding: 74px 0;
     }
 
-    .section-actions {
-      margin-top: 28px;
-    }
-
     .section-heading {
       display: grid;
       grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.58fr);
@@ -1121,12 +1117,6 @@
       flex-wrap: wrap;
     }
 
-    .footer-inner a {
-      color: var(--brand-dark);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
     @media (max-width: 900px) {
       .nav {
         align-items: flex-start;
@@ -1321,7 +1311,7 @@
           ],
           "telephone": "+601111123703",
           "email": "hello@sidebypsych.com",
-          "priceRange": "RM150-RM1,100",
+          "priceRange": "RM75-RM1,100",
           "currenciesAccepted": "MYR",
           "medicalSpecialty": "Clinical Psychology",
           "identifier": {
@@ -1369,6 +1359,22 @@
                 "price": "500",
                 "priceCurrency": "MYR",
                 "itemOffered": { "@type": "Service", "name": "四次个人心理治疗配套" }
+              },
+              {
+                "@type": "Offer",
+                "price": "100",
+                "priceCurrency": "MYR",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "线上个人心理治疗",
+                  "description": "由注册临床心理师提供，每次至少 60 分钟的线上心理治疗。"
+                }
+              },
+              {
+                "@type": "Offer",
+                "price": "360",
+                "priceCurrency": "MYR",
+                "itemOffered": { "@type": "Service", "name": "四次线上心理治疗套票" }
               },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "心理评估" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "心理教育与讲座" } }
@@ -1464,7 +1470,7 @@
           "name": "个人心理治疗的费用是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "个人心理治疗每次 RM150，每次至少 60 分钟。四次配套从 RM500 起，另有六次、八次与十次配套可选。心理评估、报告与其他专业服务将另行报价。"
+            "text": "面对面个人心理治疗每次 RM150，每次至少 60 分钟，四次套票从 RM500 起。线上个人心理治疗每次 RM100，每次至少 60 分钟，四次线上套票从 RM360 起。心理评估、报告与其他专业服务将另行报价。"
           }
         },
         {
@@ -1491,7 +1497,7 @@
         </span>
       </a>
       <div class="nav-links">
-        <a href="/mandarin-eft.html">情绪取向治疗</a>
+        <a href="#eft">情绪取向治疗</a>
         <a href="#services">服务</a>
         <a href="#founder">创办人</a>
         <a href="#faq">常见问题</a>
@@ -1514,7 +1520,7 @@
         <p class="lead">伴旅心理健康服务位于安邦，由注册临床心理师提供预约制心理治疗与心理支持，也欢迎来自雪兰莪与吉隆坡一带的来谈者。我们以情绪取向治疗（Emotion Focused Therapy，EFT）为主要取向，陪伴您理解情绪困扰、人际关系模式、自我批评、焦虑、低落与生活压力。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://wa.me/601111123703">预约咨询</a>
-          <a class="button button-secondary" href="/mandarin-eft.html">了解情绪取向治疗</a>
+          <a class="button button-secondary" href="#eft">了解情绪取向治疗</a>
         </div>
         <div class="hero-note" aria-label="主要资料">
           <span class="pill">Emotion Focused Therapy</span>
@@ -1636,9 +1642,6 @@
           <img src="assets/sisi-self-compassion.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
         </figure>
       </div>
-      <div class="section-actions">
-        <a class="button button-secondary" href="/mandarin-eft.html">进一步了解情绪取向治疗</a>
-      </div>
     </section>
 
     <section class="section content-section" id="services">
@@ -1754,8 +1757,8 @@
         <div>
           <article class="notice-card">
             <p class="eyebrow">费用</p>
-            <h3>个人心理治疗：每次 RM150。</h3>
-            <p>每次至少 60 分钟。四次配套从 RM500 起，另有六次、八次与十次配套可选。是否适合购买配套，可在确认前先与临床心理师讨论。</p>
+            <h3>面对面治疗每次 RM150；线上治疗每次 RM100。</h3>
+            <p>每次至少 60 分钟。面对面四次套票从 RM500 起；线上四次套票从 RM360 起。是否适合购买配套，可在确认前先与临床心理师讨论。</p>
             <p>如需取消或改期，请至少提前 12 小时通知；改期需视可预约时段而定。</p>
           </article>
           <article class="notice-card">
@@ -1792,7 +1795,7 @@
         </details>
         <details class="faq-item">
           <summary><h3>个人心理治疗的费用是多少？</h3></summary>
-          <p>个人心理治疗每次 RM150，每次至少 60 分钟。四次配套从 RM500 起，另有六次、八次与十次配套可选。心理评估、报告与其他专业服务将另行报价。</p>
+          <p>面对面个人心理治疗每次 RM150，每次至少 60 分钟，四次套票从 RM500 起。线上个人心理治疗每次 RM100，每次至少 60 分钟，四次线上套票从 RM360 起。心理评估、报告与其他专业服务将另行报价。</p>
         </details>
         <details class="faq-item">
           <summary><h3>遇到紧急危机时，可以联系中心吗？</h3></summary>
@@ -1885,7 +1888,7 @@
   <footer>
     <div class="footer-inner">
       <span>Side by Psych Wellness Centre | 伴旅心理健康服务</span>
-      <span><a href="/privacy.html#zh">隐私说明</a> | Registration No. 202403299646</span>
+      <span>Registration No. 202403299646</span>
     </div>
   </footer>
 
@@ -1997,6 +2000,5 @@
       revealTargets.forEach((target) => target.classList.add("is-visible"));
     }
   </script>
-  <script src="/assets/site-analytics.js?v=20260724" data-measurement-id="G-9S9P15LX9G" defer></script>
 </body>
 </html>
