@@ -518,16 +518,26 @@
     }
 
     .founder-card {
-      display: grid;
-      align-content: end;
-      min-height: 500px;
-      padding: 28px;
+      align-self: start;
+      justify-self: center;
+      width: 100%;
+      max-width: 480px;
       border-radius: 8px;
       color: var(--white);
-      background:
-        linear-gradient(180deg, rgba(27, 29, 27, 0), rgba(27, 29, 27, 0.2) 44%, rgba(27, 29, 27, 0.86)),
-        url("assets/founder-kai-shen.jpg") center / cover no-repeat;
+      background: var(--brand-dark);
       overflow: hidden;
+    }
+
+    .founder-portrait {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 900 / 1128;
+      object-fit: cover;
+    }
+
+    .founder-caption {
+      padding: 24px;
     }
 
     .founder-badge {
@@ -1618,9 +1628,12 @@
     <section class="section content-section" id="founder">
       <div class="founder">
         <aside class="founder-card" aria-label="Founder profile">
+          <img class="founder-portrait" src="assets/founder-kai-shen.jpg" alt="Chen Kai Shen, founder and clinical psychologist at Side by Psych" width="900" height="1128" loading="lazy" decoding="async">
+          <div class="founder-caption">
           <span class="founder-badge">MAHPC registered | MSCP full member</span>
           <h2>Chen Kai Shen</h2>
           <p>Clinical Psychologist | Emotion-Focused Therapist</p>
+          </div>
         </aside>
 
         <div class="founder-copy">
