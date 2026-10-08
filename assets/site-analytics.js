@@ -127,9 +127,9 @@
     });
 
     document.addEventListener("submit", (event) => {
-      if (event.target?.id !== "enquiryForm") return;
+      if (!["enquiryForm", "enquiry-form"].includes(event.target?.id)) return;
       if (!event.target.checkValidity()) return;
-      recordContact(event.submitter?.dataset?.send === "email" ? "email" : "whatsapp", "enquiry_form_submit");
+      recordContact((event.submitter?.dataset?.send || event.submitter?.value) === "email" ? "email" : "whatsapp", "enquiry_form_submit");
     });
   };
 
