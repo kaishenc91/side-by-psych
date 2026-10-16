@@ -17,3 +17,8 @@
 .process-label{display:block;color:var(--accent);font-size:.875rem;font-weight:500;letter-spacing:.04em;margin-bottom:18px}.process-note{font-size:.875rem;color:var(--muted);margin-top:30px;text-align:center}.refined-detail .process-note{text-align:left}
 
 .footer-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-bottom:16px}.enquiry-form #enquiry-selection-status{margin:12px 0 20px;color:var(--accent)}
+
+/* Approved portraits, 17 October 2026. */
+.founder-photo img[src*="kai-shen-office-portrait"]{aspect-ratio:3/4;height:auto;object-position:center top}
+.zh-page .founder-card{width:100%;max-width:300px;justify-self:center;text-align:center}
+.zh-page .founder-card img[src*="kai-shen-headshot"]{display:block;width:180px;max-width:100%;height:auto;aspect-ratio:3/4;object-position:center top;margin:0 auto 24px}
