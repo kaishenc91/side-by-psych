@@ -22,3 +22,7 @@
 .founder-photo img[src*="kai-shen-office-portrait"]{aspect-ratio:3/4;height:auto;object-position:center top}
 .zh-page .founder-card{width:100%;max-width:300px;justify-self:center;text-align:center}
 .zh-page .founder-card img[src*="kai-shen-headshot"]{display:block;width:180px;max-width:100%;height:auto;aspect-ratio:3/4;object-position:center top;margin:0 auto 24px}
+
+
+/* New seating-room photograph: preserve the wide composition at every screen size. */
+.hero-photo img[src*="room-hero-20261023"],.zh-hero img[src*="room-hero-20261023"]{width:100%;height:auto;aspect-ratio:1672/941;object-position:center;object-fit:cover}
