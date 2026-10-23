@@ -26,3 +26,6 @@
 
 /* New seating-room photograph: preserve the wide composition at every screen size. */
 .hero-photo img[src*="room-hero-20261023"],.zh-hero img[src*="room-hero-20261023"]{width:100%;height:auto;aspect-ratio:1672/941;object-position:center;object-fit:cover}
+
+/* Short preparation checklist inside online-session FAQs. */
+.faq-list .online-session-checklist{list-style:disc;padding:0 25px 20px 22px;margin:0;color:var(--muted);font-size:1rem;line-height:1.7}.faq-list .online-session-checklist li+li{margin-top:12px}
