@@ -29,3 +29,13 @@
 
 /* Short preparation checklist inside online-session FAQs. */
 .faq-list .online-session-checklist{list-style:disc;padding:0 25px 20px 22px;margin:0;color:var(--muted);font-size:1rem;line-height:1.7}.faq-list .online-session-checklist li+li{margin-top:12px}
+
+
+
+/* Approved bilingual FAQ: four topic groups with native keyboard-accessible disclosures. */
+.faq-list .faq-group + .faq-group{margin-top:40px}
+.faq-list .faq-group-title{margin:0 0 4px;font-size:1.0625rem;line-height:1.5;font-weight:650;color:var(--accent)}
+.faq-list .faq-answer-list{list-style:disc;padding:0 25px 20px 22px;margin:0;color:var(--muted);font-size:1rem;line-height:1.7}
+.faq-list .faq-answer-list li + li{margin-top:8px}
+.faq-list .faq-group details{scroll-margin-top:100px}
+@media(max-width:700px){.faq-list .faq-group + .faq-group{margin-top:32px}}
