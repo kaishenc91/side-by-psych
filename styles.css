@@ -46,3 +46,17 @@
 .credentials .credential-with-organisation{min-width:0}
 .credentials .credential-org{font-size:.8125rem;line-height:1.5;letter-spacing:0}
 .credentials .credential-number{margin-top:4px;font-size:.875rem;line-height:1.5}
+
+
+
+/* Concise multilingual privacy notice: readable text and clear language sections. */
+.privacy-header{max-width:850px}
+.privacy-header h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:650;line-height:1.08}
+.privacy-header .hero-lead{margin-top:20px;color:var(--muted);max-width:680px}
+.privacy-header>p:not(.eyebrow):not(.hero-lead){margin-top:16px;font-size:.9375rem}
+.privacy-header a,.privacy-content a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.privacy-content .privacy-language+.privacy-language{margin-top:60px;padding-top:20px;border-top:1px solid var(--line)}
+.privacy-content .privacy-language h3{font-size:1.125rem!important;line-height:1.5;letter-spacing:-.015em;margin-top:28px;margin-bottom:10px}
+.privacy-content .privacy-language ul{padding-left:22px;color:var(--muted);line-height:1.75}
+.privacy-content .privacy-language li+li{margin-top:6px}
+.privacy-language{scroll-margin-top:100px}
