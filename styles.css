@@ -39,3 +39,10 @@
 .faq-list .faq-answer-list li + li{margin-top:8px}
 .faq-list .faq-group details{scroll-margin-top:100px}
 @media(max-width:700px){.faq-list .faq-group + .faq-group{margin-top:32px}}
+
+
+
+/* Full organisation names support the existing compact credential grid. */
+.credentials .credential-with-organisation{min-width:0}
+.credentials .credential-org{font-size:.8125rem;line-height:1.5;letter-spacing:0}
+.credentials .credential-number{margin-top:4px;font-size:.875rem;line-height:1.5}
