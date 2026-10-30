@@ -60,3 +60,5 @@
 .privacy-content .privacy-language ul{padding-left:22px;color:var(--muted);line-height:1.75}
 .privacy-content .privacy-language li+li{margin-top:6px}
 .privacy-language{scroll-margin-top:100px}
+
+@media(min-width:761px) and (max-width:1100px){.nav{flex-wrap:wrap;gap:15px}.menu-toggle{display:block;border:0;background:var(--soft);padding:10px 15px;border-radius:20px}.nav-links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;padding-bottom:18px}.nav-links.open{display:flex}.nav-links>a{padding:13px 0;font-size:1rem}.nav-links .button{padding:13px 20px}}
