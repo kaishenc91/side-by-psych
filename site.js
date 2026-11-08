@@ -28,3 +28,10 @@ enquiryForm?.addEventListener('submit', event => {
     : `https://wa.me/601111123703?text=${encodeURIComponent(message.trim())}`;
   window.location.href = destination;
 });
+
+// Keep the HTML form disabled unless its safe submit handler is installed.
+const enquiryFields = enquiryForm?.querySelector('#enquiry-fields');
+if (enquiryFields && typeof FormData === 'function') {
+  enquiryFields.disabled = false;
+  document.querySelector('#enquiry-unavailable')?.setAttribute('hidden', '');
+}
